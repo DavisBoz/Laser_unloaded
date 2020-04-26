@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
+    <Compile Include="Assets\Scripts\SmoothFollow.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/daveybaby/Laser_unloaded/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
