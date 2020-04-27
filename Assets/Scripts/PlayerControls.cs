@@ -6,9 +6,7 @@ public class PlayerControls : MonoBehaviour
 {
 
     public float speed;
-    private int Jumped;
     private Rigidbody rb;
-    private int count;
     public GameObject head;
 
     void Start()
@@ -16,34 +14,33 @@ public class PlayerControls : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        GetComponent<Rigidbody>().AddForce(Vector3.forward * speed * moveVertical);
-        GetComponent<Rigidbody>().AddForce(Vector3.right * speed * moveHorizontal);
+        rb.AddForce(Vector3.right * speed * moveHorizontal);
+        rb.AddForce(Vector3.forward * speed * moveVertical);
 
-        if(moveHorizontal==0 && moveVertical==0)
+
+        if (moveHorizontal==0 && moveVertical==0)
         {
-            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
-        if (rb.transform.position.y == 0.5f)
-            Jumped = 0;
-        if (Input.GetKeyDown("space") && Jumped < 2)
+
+        if (Input.GetKeyDown("space") && rb.transform.position.y <= 0.5f)
         {
             Vector3 jump = new Vector3(0.0f, 200.0f, 0.0f);
             rb.AddForce(jump);
-            Jumped += 1;
         }
     }
 
 
-    private void Update()
+     void Update()
     {
         head.transform.position = transform.position;
     }
-
 
 }
