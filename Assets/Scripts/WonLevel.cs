@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResetLevel : MonoBehaviour
+public class WonLevel : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public float displayImageDuration = 1f;
     public GameObject player;
-    public CanvasGroup ResetBackgroundImageCanvasGroup;
-    public AudioSource resetAudio;
+    public CanvasGroup WonBackgroundImageCanvasGroup;
+    public AudioSource wonAudio;
 
     bool m_IsPlayerAtExit;
     float m_Timer;
@@ -27,7 +27,7 @@ public class ResetLevel : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
-            FailLevel(ResetBackgroundImageCanvasGroup, resetAudio);
+            FailLevel(WonBackgroundImageCanvasGroup, wonAudio);
         }
     }
 
@@ -45,7 +45,7 @@ public class ResetLevel : MonoBehaviour
 
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            SceneManager.LoadScene("POC");
+            Application.Quit();
         }
     }
 }

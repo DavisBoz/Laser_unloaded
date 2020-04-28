@@ -1,7 +1,31 @@
 using UnityEngine;
 
 namespace VolumetricLines
-{ 
+{
+	/// <summary>
+	/// Render a single volumetric line
+	/// 
+	/// Based on the Volumetric lines algorithm by Sebastien Hillaire
+	/// http://sebastien.hillaire.free.fr/index.php?option=com_content&view=article&id=57&Itemid=74
+	/// 
+	/// Thread in the Unity3D Forum:
+	/// http://forum.unity3d.com/threads/181618-Volumetric-lines
+	/// 
+	/// Unity3D port by Johannes Unterguggenberger
+	/// johannes.unterguggenberger@gmail.com
+	/// 
+	/// Thanks to Michael Probst for support during development.
+	/// 
+	/// Thanks for bugfixes and improvements to Unity Forum User "Mistale"
+	/// http://forum.unity3d.com/members/102350-Mistale
+    /// 
+    /// Shader code optimization and cleanup by Lex Darlog (aka DRL)
+    /// http://forum.unity3d.com/members/lex-drl.67487/
+    /// 
+	/// </summary>
+	[RequireComponent(typeof(MeshFilter))]
+	[RequireComponent(typeof(MeshRenderer))]
+	[ExecuteInEditMode]
 	public class VolumetricLineBehavior : MonoBehaviour 
 	{
 		// Used to compute the average value of all the Vector3's components:
