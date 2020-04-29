@@ -61,4 +61,34 @@ public class PlayerControls : MonoBehaviour
         head.transform.position = transform.position;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        // Beginning Double damage
+        /*
+        if(other.gameObject.CompareTag("DoubleDmg"))
+        {
+            other.gameObject.SetActive(false);
+            m_shot = GetComponent<ShotBehavior>();
+            m_shot.damageAmount *= 2;
+            print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
+        }
+        */
+
+        // Extra Health
+        if(other.gameObject.CompareTag("ExtraHealth"))
+        {
+            other.gameObject.SetActive(false);
+            rb.gameObject.GetComponent<PlayerHealth>().currentHealth += 50;
+            print("Player got extra health");
+
+        }
+
+        if(other.gameObject.CompareTag("SpeedUp"))
+        {
+            other.gameObject.SetActive(false);
+            speed += 30;
+            print("Player got more speed");
+        }
+    }
+
 }
