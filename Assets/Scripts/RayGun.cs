@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RayGun : MonoBehaviour
 {
@@ -35,7 +33,6 @@ public class RayGun : MonoBehaviour
             GameObject laser = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
             laser.GetComponent<ShotBehavior>().setTarget(hit.point);
             GameObject.Destroy(laser, 2f);
-
 
         }
 

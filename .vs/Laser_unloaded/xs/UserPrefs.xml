@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RayGun.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WonLevel.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="24" Column="36" />
-      <File FileName="Assets/Scripts/Raygun.cs" Line="36" Column="13" />
-      <File FileName="Assets/VolumetricLines/Scripts/VolumetricLineBehavior.cs" />
-      <File FileName="Assets/Scripts/ResetLevel.cs" />
-      <File FileName="Assets/Scripts/WonLevel.cs" />
-      <File FileName="Assets/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/ShotBehavior.cs" Line="46" Column="2" />
+      <File FileName="Assets/Scripts/Raygun.cs" Line="35" Column="43" />
+      <File FileName="Assets/Scripts/ResetLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/WonLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SmoothFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyHealth.cs" Line="8" Column="127" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="20" Column="5" />
+      <File FileName="Assets/Scripts/EnemyAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,15 +16,7 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="RayGun.cs" selected="True" />
-              </Node>
-              <Node name="VolumetricLines" expanded="True">
-                <Node name="BuiltInRenderPipeline" expanded="True">
-                  <Node name="ExampleScenes" expanded="True">
-                    <Node name="ExampleScripts" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="Scripts" expanded="True" />
+                <Node name="WonLevel.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -32,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5ff82d7f-cd93-4c14-b9e4-956f34e38915" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6dcd4610-76e5-4fd2-88be-2573f1b1e96d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
