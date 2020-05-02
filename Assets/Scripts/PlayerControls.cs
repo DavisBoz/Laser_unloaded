@@ -9,12 +9,14 @@ public class PlayerControls : MonoBehaviour
     public float JumpHeight;
     public float fallspeed;
     public GameObject head;
+    public GameObject muzzle;
     public int cont_speed;
-
+    RayGun m_shot;
     private Rigidbody rb;
     private Vector3 deceleration = new Vector3(.5f, 1f, .5f);
     private float ypos;
     private bool falling = false;
+
 
     void Start()
     {
@@ -66,15 +68,15 @@ public class PlayerControls : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Beginning Double damage
-        /*
-        if(other.gameObject.CompareTag("DoubleDmg"))
+        
+        if(other.gameObject.CompareTag("DoubleDamage"))
         {
             other.gameObject.SetActive(false);
-            m_shot = GetComponent<ShotBehavior>();
+            m_shot = muzzle.GetComponent<RayGun>();
             m_shot.damageAmount *= 2;
             print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
         }
-        */
+        
 
         // Extra Health
         if(other.gameObject.CompareTag("ExtraHealth"))

@@ -44,6 +44,7 @@ public class EnemyAttack : MonoBehaviour
         {
             // ... the player is no longer in range.
             playerInRange = false;
+            anim.SetTrigger("Idle");
         }
     }
 
@@ -74,6 +75,7 @@ public class EnemyAttack : MonoBehaviour
             // ... damage the player.
             anim.SetTrigger("Attack");
             playerHealth.TakeDamage(attackDamage);
+            anim.SetTrigger("Idle");
         }
     }
 }

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5100754773554112000}
   - component: {fileID: 5100754773554112001}
   m_Layer: 0
-  m_Name: ExtraHealth
-  m_TagString: ExtraHealth
+  m_Name: DoubleDamage
+  m_TagString: DoubleDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ Halo:
   m_Enabled: 1
   m_Color:
     serializedVersion: 2
-    rgba: 4278255388
+    rgba: 4294961664
   m_Size: 0.75
 --- !u!54 &5100754773554112001
 Rigidbody:
