@@ -6,7 +6,6 @@ public class ShotBehavior : MonoBehaviour
     public Vector3 m_target;
     public GameObject collisionExplosion;
     public float speed;
-    public int damageAmount;
 
     // Update is called once per frame
     void Update()
@@ -26,14 +25,6 @@ public class ShotBehavior : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Enemy")
-        {
-            other.transform.SendMessage("TakeDamage", damageAmount);
-        }
-
-    }
 
     public void setTarget(Vector3 target)
     {

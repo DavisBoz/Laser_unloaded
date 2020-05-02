@@ -3,15 +3,22 @@
 public class RayGun : MonoBehaviour
 {
     public float shootRate;
-    private float m_shootRateTimeStamp;
-
+    int shootableMask;
     public GameObject m_shotPrefab;
-
+    public int damageAmount;
     RaycastHit hit;
     float range = 1000.0f;
 
+    private float m_shootRateTimeStamp;
 
-    void Update()
+
+    void Awake()
+    {
+        // Create a layer mask for the Shootable layer.
+        shootableMask = LayerMask.GetMask("Shootable");
+    }
+
+        void Update()
     {
 
         if (Input.GetMouseButton(0))
@@ -28,10 +35,20 @@ public class RayGun : MonoBehaviour
     void shootRay()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, range))
+        if (Physics.Raycast(ray, out hit, range, shootableMask))
         {
+            
             GameObject laser = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
             laser.GetComponent<ShotBehavior>().setTarget(hit.point);
+            EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+
+            // If the EnemyHealth component exist...
+            if (enemyHealth != null)
+            {
+                // ... the enemy should take damage.
+                enemyHealth.TakeDamage(damageAmount);
+            }
+            
             GameObject.Destroy(laser, 2f);
 
         }

@@ -9,6 +9,7 @@ public class PlayerControls : MonoBehaviour
     public float JumpHeight;
     public float fallspeed;
     public GameObject head;
+    public int cont_speed;
 
     private Rigidbody rb;
     private Vector3 deceleration = new Vector3(.5f, 1f, .5f);
@@ -33,10 +34,10 @@ public class PlayerControls : MonoBehaviour
         }
         rb.AddForce(Vector3.right * speed * moveHorizontal);
 
-        if (moveHorizontal == 0 && moveVertical == 0)
+        /*if (moveHorizontal == 0 && moveVertical == 0)
         {
             rb.angularVelocity = Vector3.zero;
-        }
+        }*/
 
         if (ypos <= .5f)
             falling = false;
@@ -59,6 +60,7 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         head.transform.position = transform.position;
+        rb.AddForce(Vector3.forward * speed);
     }
 
     void OnTriggerEnter(Collider other)
