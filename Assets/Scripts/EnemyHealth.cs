@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     bool isDead;
 
     Animator anim;                              // Reference to the animator.
-    
+    public AudioSource alienDeath;
 
 
     void Awake()
@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
 
 
         // Reduce the current health by the amount of damage sustained.
-        if (hit < 2)
+        if (hit <= 1)
         {
             anim.SetTrigger("Hit");
             hit += 1;
@@ -52,6 +52,7 @@ public class EnemyHealth : MonoBehaviour
     {
         isDead = true;
         // Tell the animator that the enemy is dead.
+        alienDeath.Play();
         anim.SetTrigger("Dead");
         Destroy(gameObject, 2f);
     }

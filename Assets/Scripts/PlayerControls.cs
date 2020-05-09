@@ -12,10 +12,30 @@ public class PlayerControls : MonoBehaviour
     public GameObject muzzle;
     public int cont_speed;
     RayGun m_shot;
+
+    public static int gravity_direction = 1;
+    public static int previous_direction = 1;
+    // 1 = down
+    // 2 = right
+    // 3 = up
+    // 4 = left
+
+    private Vector3 right_horizontal = Vector3.up;
+    private Vector3 top_horizontal = Vector3.left;
+    private Vector3 left_horizontal = Vector3.down;
+    private Vector3 bottom_horizontal = Vector3.right;
+    private Vector3 current_horizontal = Vector3.right;
+
+
+    private Vector3 current_gravity = Vector3.down;
+
+    private Vector3 jump_direction = Vector3.up;
+
+    public static bool g_changed = false;
     private Rigidbody rb;
     private Vector3 deceleration = new Vector3(.5f, 1f, .5f);
-    private float ypos;
-    private bool falling = false;
+    private Vector3 pos;
+    private bool grounded = false;
 
 
     void Start()
@@ -28,39 +48,45 @@ public class PlayerControls : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        ypos = rb.transform.position.y;
+        pos = rb.transform.position;
 
         if (moveVertical >= 0)
         {
             rb.AddForce(Vector3.forward * speed * moveVertical);
         }
-        rb.AddForce(Vector3.right * speed * moveHorizontal);
+        rb.AddForce(current_horizontal * speed * moveHorizontal);
 
         /*if (moveHorizontal == 0 && moveVertical == 0)
         {
             rb.angularVelocity = Vector3.zero;
         }*/
 
-        if (ypos <= .5f)
-            falling = false;
-        if (ypos >= 1.5f || Input.GetKeyUp("space"))
-            falling = true;
+        if (Physics.Raycast(pos, current_gravity, 1f))
+            grounded = true;
+        else
+            grounded = false;
 
-        if (Input.GetKey("space") && !falling && ypos > .25f)
+        if (Input.GetKey("space") && grounded)
         {
-            rb.velocity += Vector3.up * JumpHeight;
-        }
-        else if (falling)
-        {
-            rb.velocity += Vector3.down * fallspeed;
+            rb.AddForce(jump_direction * JumpHeight);
         }
 
         rb.velocity = Vector3.Scale(rb.velocity, deceleration);
+
+        rb.AddForce(current_gravity * 50);
+
+
     }
 
 
     void Update()
     {
+        if (g_changed)
+        {
+            previous_direction = gravity_direction;
+            g_changed = false;
+        }
+
         head.transform.position = transform.position;
         rb.AddForce(Vector3.forward * speed);
     }
@@ -92,6 +118,43 @@ public class PlayerControls : MonoBehaviour
             other.gameObject.SetActive(false);
             speed += 30;
             print("Player got more speed");
+        }
+
+        if(other.gameObject.CompareTag("Right_wall"))
+        {
+            g_changed = true;
+            gravity_direction = 2;
+            current_horizontal = right_horizontal;
+            current_gravity = Vector3.right;
+            jump_direction = Vector3.left;
+            deceleration = new Vector3(1f, .5f, .5f);
+        }
+        if (other.gameObject.CompareTag("Left_wall"))
+        {
+            g_changed = true;
+            gravity_direction = 4;
+            current_horizontal = left_horizontal;
+            current_gravity = Vector3.left;
+            jump_direction = Vector3.right;
+            deceleration = new Vector3(1f, .5f, .5f);
+        }
+        if (other.gameObject.CompareTag("Top_wall"))
+        {
+            g_changed = true;
+            gravity_direction = 3;
+            current_horizontal = top_horizontal;
+            current_gravity = Vector3.up;
+            jump_direction = Vector3.down;
+            deceleration = new Vector3(.5f, 1f, .5f);
+        }
+        if (other.gameObject.CompareTag("Bottom_wall"))
+        {
+            g_changed = true;
+            gravity_direction = 1;
+            current_horizontal = bottom_horizontal;
+            current_gravity = Vector3.down;
+            jump_direction = Vector3.up;
+            deceleration = new Vector3(.5f, 1f, .5f);
         }
     }
 

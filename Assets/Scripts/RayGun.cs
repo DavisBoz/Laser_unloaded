@@ -8,6 +8,7 @@ public class RayGun : MonoBehaviour
     public int damageAmount;
     RaycastHit hit;
     float range = 1000.0f;
+    public AudioSource laserSound;
 
     private float m_shootRateTimeStamp;
 
@@ -25,6 +26,7 @@ public class RayGun : MonoBehaviour
         {
             if (Time.time > m_shootRateTimeStamp)
             {
+                laserSound.Play();
                 shootRay();
                 m_shootRateTimeStamp = Time.time + shootRate;
             }

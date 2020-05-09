@@ -8,6 +8,10 @@ TagManager:
   - SpeedUp
   - ExtraHealth
   - DoubleDamage
+  - Right_wall
+  - Left_wall
+  - Top_wall
+  - Bottom_wall
   layers:
   - Default
   - TransparentFX
