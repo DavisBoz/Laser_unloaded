@@ -2,11 +2,13 @@
 using System.Collections;
 
 
+
 public class EnemyAttack : MonoBehaviour
 {
     public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
     public int attackDamage = 10;               // The amount of health taken away per attack.
-
+    public AudioSource Smack;
+    public AudioSource Growl;
 
     Animator anim;                              // Reference to the animator component.
     GameObject player;                          // Reference to the player GameObject.
@@ -33,6 +35,7 @@ public class EnemyAttack : MonoBehaviour
         {
             // ... the player is in range.
             playerInRange = true;
+            Growl.Play();
         }
     }
 
@@ -73,6 +76,7 @@ public class EnemyAttack : MonoBehaviour
         if (playerHealth.currentHealth > 0)
         {
             // ... damage the player.
+            Smack.Play();
             anim.SetTrigger("Attack");
             playerHealth.TakeDamage(attackDamage);
             anim.SetTrigger("Idle");

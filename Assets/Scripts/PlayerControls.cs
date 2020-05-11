@@ -12,7 +12,7 @@ public class PlayerControls : MonoBehaviour
     public GameObject muzzle;
     public int cont_speed;
     RayGun m_shot;
-
+    public AudioSource BB8Jump;
     public static int gravity_direction = 1;
     public static int previous_direction = 1;
     // 1 = down
@@ -69,6 +69,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKey("space") && grounded)
         {
             rb.AddForce(jump_direction * JumpHeight);
+            BB8Jump.Play();
         }
 
         rb.velocity = Vector3.Scale(rb.velocity, deceleration);
