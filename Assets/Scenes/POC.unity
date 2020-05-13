@@ -2472,7 +2472,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -2765,6 +2765,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &75145637
@@ -6827,7 +6831,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -7120,6 +7124,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &231237330
@@ -10019,6 +10027,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &300017233
@@ -11844,7 +11856,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -12137,6 +12149,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &359083274
@@ -14549,7 +14565,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -14837,6 +14853,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &428819695
@@ -16348,7 +16368,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -16641,6 +16661,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &464312023
@@ -16765,7 +16789,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -17053,6 +17077,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &467506648
@@ -17592,6 +17620,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &487860907
@@ -19288,6 +19320,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1186878025, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: player
       value: 
@@ -20361,7 +20397,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.85
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -20654,6 +20690,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &558817240
@@ -22954,8 +22994,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 0.5, z: 15}
-  m_Center: {x: 35, y: 0, z: 0}
+  m_Size: {x: 175, y: 0.5, z: 15}
+  m_Center: {x: 80, y: 0, z: 0}
 --- !u!1 &653824333
 GameObject:
   m_ObjectHideFlags: 0
@@ -25724,6 +25764,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &728359413
@@ -26850,7 +26894,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -27138,6 +27182,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &766773783
@@ -27901,7 +27949,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -28194,6 +28242,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &794136530
@@ -28698,6 +28750,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1186878024, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: m_Center.x
       value: 0
@@ -30600,17 +30656,17 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.09
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.13
+      value: -14.3
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -30893,6 +30949,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &838061221 stripped
@@ -38737,7 +38797,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -39025,6 +39085,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1060538060
@@ -39541,7 +39605,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -39829,6 +39893,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1069975838
@@ -42948,8 +43016,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 0.5, z: 15}
-  m_Center: {x: 35, y: 0, z: 0}
+  m_Size: {x: 175, y: 0.5, z: 15}
+  m_Center: {x: 80, y: 0, z: 0}
 --- !u!1 &1182964021
 GameObject:
   m_ObjectHideFlags: 0
@@ -46562,8 +46630,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 0.5, z: 15}
-  m_Center: {x: 35, y: 0, z: 0}
+  m_Size: {x: 175, y: 0.5, z: 15}
+  m_Center: {x: 80, y: 0, z: 0}
 --- !u!1 &1309342050
 GameObject:
   m_ObjectHideFlags: 0
@@ -51441,7 +51509,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -51734,6 +51802,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1424177923
@@ -52129,7 +52201,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -52422,6 +52494,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1445473663
@@ -53740,7 +53816,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -54033,6 +54109,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1485790193
@@ -54095,8 +54175,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 0.5, z: 15}
-  m_Center: {x: 35, y: 0, z: 0}
+  m_Size: {x: 175, y: 0.5, z: 15}
+  m_Center: {x: 80, y: 0, z: 0}
 --- !u!1 &1486058785
 GameObject:
   m_ObjectHideFlags: 0
@@ -54311,7 +54391,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -54599,6 +54679,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1498021834
@@ -56927,6 +57011,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1568612165
@@ -57190,7 +57278,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -57478,6 +57566,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1576967479
@@ -58275,7 +58367,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -58568,6 +58660,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1607074135
@@ -58963,7 +59059,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -59256,6 +59352,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1615448080
@@ -63342,6 +63442,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1746891204
@@ -64484,6 +64588,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1762646914
@@ -65006,7 +65114,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -65299,6 +65407,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1783676572
@@ -67427,7 +67539,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.86
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -67715,6 +67827,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1839766867
@@ -72408,7 +72524,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.95
+      value: 14.05
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -72701,6 +72817,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &1994577367
@@ -73096,7 +73216,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -73389,6 +73509,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &2010339379
@@ -74152,7 +74276,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -74445,6 +74569,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &2043907850
@@ -75804,7 +75932,7 @@ PrefabInstance:
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 957432931958760243, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -76097,6 +76225,10 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!1 &2099662424
@@ -78033,6 +78165,11 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
+    - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2598146804209767126, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: m_Controller
@@ -78170,7 +78307,7 @@ PrefabInstance:
     - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_Drag
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
@@ -78190,7 +78327,7 @@ PrefabInstance:
     - target: {fileID: 5262043433504507244, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: speed
-      value: 120
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 5262043433504507244, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
@@ -78200,7 +78337,7 @@ PrefabInstance:
     - target: {fileID: 5262043433504507244, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: JumpHeight
-      value: 200
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5262043433504507244, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}

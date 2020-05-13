@@ -35,7 +35,9 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody rb;
     private Vector3 deceleration = new Vector3(.5f, 1f, .5f);
     private Vector3 pos;
-    private bool grounded = false;
+    private bool grounded = true;
+    private float ypos;
+    private bool falling = false;
 
     GameObject cam;
 
@@ -51,6 +53,7 @@ public class PlayerControls : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        ypos = rb.transform.position.y;
         pos = rb.transform.position;
 
         if (moveVertical >= 0)
@@ -64,16 +67,22 @@ public class PlayerControls : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }*/
 
-        if (Physics.Raycast(pos, current_gravity, 1f))
-            grounded = true;
-        else
-            grounded = false;
+        if (ypos <= .5f)
+            falling = false;
+        if (ypos >= 1.5f || Input.GetKeyUp("space"))
+            falling = true;
 
-        if (Input.GetKey("space") && grounded)
+        if (Input.GetKey("space") && !falling && ypos > .25f)
         {
-            rb.AddForce(jump_direction * JumpHeight);
+            rb.velocity += Vector3.up * JumpHeight;
             BB8Jump.Play();
         }
+        else if (falling)
+        {
+            rb.velocity += Vector3.down * fallspeed;
+        
+        }
+
 
         rb.velocity = Vector3.Scale(rb.velocity, deceleration);
 
@@ -98,18 +107,18 @@ public class PlayerControls : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Beginning Double damage
-        
-        if(other.gameObject.CompareTag("DoubleDamage"))
+
+        if (other.gameObject.CompareTag("DoubleDamage"))
         {
             other.gameObject.SetActive(false);
             m_shot = muzzle.GetComponent<RayGun>();
             m_shot.damageAmount *= 2;
             print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
         }
-        
+
 
         // Extra Health
-        if(other.gameObject.CompareTag("ExtraHealth"))
+        if (other.gameObject.CompareTag("ExtraHealth"))
         {
             other.gameObject.SetActive(false);
             rb.gameObject.GetComponent<PlayerHealth>().currentHealth += 50;
@@ -117,7 +126,7 @@ public class PlayerControls : MonoBehaviour
 
         }
 
-        if(other.gameObject.CompareTag("SpeedUp"))
+        if (other.gameObject.CompareTag("SpeedUp"))
         {
             other.gameObject.SetActive(false);
             speed += 30;
