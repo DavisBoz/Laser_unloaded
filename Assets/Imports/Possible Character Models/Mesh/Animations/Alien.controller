@@ -70,7 +70,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5976671166443152984}
-    m_Position: {x: 300, y: -30, z: 0}
+    m_Position: {x: 230, y: -60, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -7554324599240811291}
@@ -98,25 +98,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Hit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Idle
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -150,7 +150,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: cde7d5e669385451d8422e1339bb8489,
+  m_Motion: {fileID: 1827226128182048838, guid: 1a542534d23394f13897e719c0d176b8,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -205,7 +205,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 485fd047af7414d3fb03093facf9f9d6,
+  m_Motion: {fileID: 1827226128182048838, guid: 8f7520e52ff344a98b2ade13ba9b4da1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -257,7 +257,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: b8997de2ebeb54c76a2e3736fa1f37e6,
+  m_Motion: {fileID: 1827226128182048838, guid: 0ebbd7793baa74192a3508d5f9b69a4f,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 

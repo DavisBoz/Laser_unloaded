@@ -27,7 +27,7 @@ public class PlayerControls : MonoBehaviour
     private Vector3 current_horizontal = Vector3.right;
 
 
-    private Vector3 current_gravity = Vector3.down;
+    public Vector3 current_gravity = Vector3.down;
 
     private Vector3 jump_direction = Vector3.up;
 
@@ -37,10 +37,13 @@ public class PlayerControls : MonoBehaviour
     private Vector3 pos;
     private bool grounded = false;
 
+    GameObject cam;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
 
@@ -121,7 +124,7 @@ public class PlayerControls : MonoBehaviour
             print("Player got more speed");
         }
 
-        if(other.gameObject.CompareTag("Right_wall"))
+        if (other.gameObject.CompareTag("Right_wall"))
         {
             g_changed = true;
             gravity_direction = 2;
@@ -129,6 +132,8 @@ public class PlayerControls : MonoBehaviour
             current_gravity = Vector3.right;
             jump_direction = Vector3.left;
             deceleration = new Vector3(1f, .5f, .5f);
+            print(head.transform.rotation);
+            head.transform.rotation = Quaternion.Euler(0, -90, 45);
         }
         if (other.gameObject.CompareTag("Left_wall"))
         {
@@ -138,6 +143,7 @@ public class PlayerControls : MonoBehaviour
             current_gravity = Vector3.left;
             jump_direction = Vector3.right;
             deceleration = new Vector3(1f, .5f, .5f);
+            head.transform.rotation = Quaternion.Euler(0, 90, 45);
         }
         if (other.gameObject.CompareTag("Top_wall"))
         {
@@ -147,6 +153,7 @@ public class PlayerControls : MonoBehaviour
             current_gravity = Vector3.up;
             jump_direction = Vector3.down;
             deceleration = new Vector3(.5f, 1f, .5f);
+            head.transform.rotation = Quaternion.Euler(90, 45, 0);
         }
         if (other.gameObject.CompareTag("Bottom_wall"))
         {
@@ -156,6 +163,8 @@ public class PlayerControls : MonoBehaviour
             current_gravity = Vector3.down;
             jump_direction = Vector3.up;
             deceleration = new Vector3(.5f, 1f, .5f);
+            head.transform.rotation = Quaternion.Euler(-90, -45, 0);
+            print(head.transform.forward);
         }
     }
 

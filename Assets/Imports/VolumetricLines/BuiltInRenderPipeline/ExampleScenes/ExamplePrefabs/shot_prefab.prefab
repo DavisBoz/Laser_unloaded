@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3370324}
   - component: {fileID: 11489952}
   - component: {fileID: 10825254}
+  - component: {fileID: 5452444623762750916}
   - component: {fileID: 1884874905573587226}
   m_Layer: 0
   m_Name: shot_prefab
@@ -159,6 +160,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!136 &5452444623762750916
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7535995
+  m_Height: 107.2062
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.07416623, z: 28.534662}
 --- !u!114 &1884874905573587226
 MonoBehaviour:
   m_ObjectHideFlags: 0
