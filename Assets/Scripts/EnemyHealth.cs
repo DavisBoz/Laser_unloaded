@@ -55,6 +55,7 @@ public class EnemyHealth : MonoBehaviour
         alienDeath.Play();
         anim.SetTrigger("Dead");
         Destroy(gameObject, 2f);
+        ScoreManager.score += scoreValue;
     }
 
 }

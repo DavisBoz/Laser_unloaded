@@ -1,42 +1,29 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
 public class PlayerControls : MonoBehaviour
 {
 
     public float speed;
-    public float JumpHeight;
-    public float fallspeed;
-    public GameObject head;
-    public GameObject muzzle;
-    public int cont_speed;
-    RayGun m_shot;
-    public AudioSource BB8Jump;
+    public float jump_height;
     public static int gravity_direction = 1;
     public static int previous_direction = 1;
+    public static bool g_changed = false;
+    public AudioSource BB8Jump;
+    public GameObject head;
+    public GameObject muzzle;
+    public Vector3 current_gravity = Vector3.down;
+    //EnemyHealth dmg;
+    RayGun m_shot;
     int jumps;
-    // 1 = down
-    // 2 = right
-    // 3 = up
-    // 4 = left
 
+    private Vector3 jump_direction = Vector3.up;
     private Vector3 right_horizontal = Vector3.up;
     private Vector3 top_horizontal = Vector3.left;
     private Vector3 left_horizontal = Vector3.down;
     private Vector3 bottom_horizontal = Vector3.right;
     private Vector3 current_horizontal = Vector3.right;
-
-
-    public Vector3 current_gravity = Vector3.down;
-
-    private Vector3 jump_direction = Vector3.up;
-
-    public static bool g_changed = false;
-    private Rigidbody rb;
     private Vector3 deceleration = new Vector3(.5f, 1f, .5f);
-    private Vector3 pos;
-    private bool grounded = true;
+    private Rigidbody rb;
 
     GameObject cam;
 
@@ -49,45 +36,34 @@ public class PlayerControls : MonoBehaviour
 
 
     void FixedUpdate()
-    {
+    { 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        pos = rb.transform.position;
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Physics.Raycast(transform.position, current_gravity, .5f))
+                rb.AddForce( jump_direction * jump_height, ForceMode.Impulse);
+                if (jumps % 10 == 0)
+                {
+                    BB8Jump.Play();
+                    jumps += 1;
+                }
+                else
+                    jumps += 1;
+        }
+        
         if (moveVertical >= 0)
         {
             rb.AddForce(Vector3.forward * speed * moveVertical);
         }
+
         rb.AddForce(current_horizontal * speed * moveHorizontal);
-
-        /*if (moveHorizontal == 0 && moveVertical == 0)
-        {
-            rb.angularVelocity = Vector3.zero;
-        }*/
-
-        if (Physics.Raycast(pos, current_gravity, .5f))
-            grounded = true;
-        else
-            grounded = false;
-
-        if (Input.GetKeyDown("space") && grounded)
-        {
-            rb.AddForce(jump_direction * JumpHeight);
-            if (jumps % 10 == 0) {
-                BB8Jump.Play();
-                jumps += 1;
-            }
-            jumps += 1;
-        }
-
-
         rb.velocity = Vector3.Scale(rb.velocity, deceleration);
-
         rb.AddForce(current_gravity * 50);
 
 
     }
-
 
     void Update()
     {
@@ -103,9 +79,7 @@ public class PlayerControls : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // Beginning Double damage
-        
-        if(other.gameObject.CompareTag("DoubleDamage"))
+        if (other.gameObject.CompareTag("DoubleDamage"))
         {
             other.gameObject.SetActive(false);
             m_shot = muzzle.GetComponent<RayGun>();
@@ -113,8 +87,6 @@ public class PlayerControls : MonoBehaviour
             print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
         }
         
-
-        // Extra Health
         if(other.gameObject.CompareTag("ExtraHealth"))
         {
             other.gameObject.SetActive(false);
@@ -130,7 +102,15 @@ public class PlayerControls : MonoBehaviour
             print("Player got more speed");
         }
 
-        if (other.gameObject.CompareTag("Right_wall"))
+        /*if (other.gameObject.CompareTag("DoubleXP"))
+        {
+            other.gameObject.SetActive(false);
+            dmg = GetComponent<EnemyHealth>();
+            dmg.scoreValue *= 2;
+            print("Doubled XP, from " + dmg.scoreValue / 2 + " to " + dmg.scoreValue);
+        }*/
+
+            if (other.gameObject.CompareTag("Right_wall"))
         {
             g_changed = true;
             gravity_direction = 2;

@@ -1,15 +1,11 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControls.cs">
     <Files>
-      <File FileName="Assets/Scripts/Raygun.cs" Line="59" Column="43" />
-      <File FileName="Assets/Scripts/ResetLevel.cs" />
-      <File FileName="Assets/Scripts/WonLevel.cs" />
-      <File FileName="Assets/Scripts/SmoothFollow.cs" />
-      <File FileName="Assets/Scripts/EnemyHealth.cs" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" />
-      <File FileName="Assets/Scripts/EnemyAttack.cs" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="79" Column="14" />
-      <File FileName="Assets/Imports/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/ShotBehavior.cs" />
+      <File FileName="Assets/Scripts/ResetLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/RayGun.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="28" Column="2" />
+      <File FileName="Assets/Scripts/EnemyHealth.cs" Line="59" Column="6" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="15" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,7 +32,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d6b10729-ef3e-440e-ad67-0629790acf52" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7b8ae72e-c87a-44ac-bffe-d6889024790f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -77,9 +77,11 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\RayGun.cs" />
     <Compile Include="Assets\Scripts\ResetLevel.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
     <Compile Include="Assets\Scripts\WonLevel.cs" />
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\_LineStripShader.cginc" />
+    <None Include="Assets\Materials\scoreboard_led\readme.txt" />
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-LightSaber.shader" />
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-LightSaber.shader" />
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
@@ -88,6 +90,7 @@
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAlphaBlended.shader" />
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAdditive.shader" />
     <None Include="Assets\Imports\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
+    <None Include="Assets\Materials\scoreboard_led\license.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/daveybaby/Laser_unloaded/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
