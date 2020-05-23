@@ -5,10 +5,11 @@ public class EnemyHealth : MonoBehaviour
     public int startingHealth = 100;            // The amount of health the enemy starts the game with.
     public int currentHealth;                   // The current health the enemy has.
     public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
-    public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.                
-    int hit;
+    public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
     bool isDead;
+    int hit;
 
+    CapsuleCollider capsuleCollider;
     Animator anim;                              // Reference to the animator.
     public AudioSource alienDeath;
 
@@ -17,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
     {
         // Setting up the references.
         anim = GetComponent<Animator>();
-
+        capsuleCollider = GetComponent<CapsuleCollider>();
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
     }
@@ -30,11 +31,13 @@ public class EnemyHealth : MonoBehaviour
 
 
         // Reduce the current health by the amount of damage sustained.
-        if (hit <= 1)
+        if(hit<=2)
         {
             anim.SetTrigger("Hit");
             hit += 1;
         }
+        
+       
         currentHealth -= amount;
 
         
@@ -52,9 +55,11 @@ public class EnemyHealth : MonoBehaviour
     {
         isDead = true;
         // Tell the animator that the enemy is dead.
+
         alienDeath.Play();
         anim.SetTrigger("Dead");
-        Destroy(gameObject, 2f);
+        capsuleCollider.isTrigger = true;
+        Destroy(gameObject, 1.5f);
         ScoreManager.score += scoreValue;
     }
 

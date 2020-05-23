@@ -15,6 +15,7 @@ public class PlayerControls : MonoBehaviour
     //EnemyHealth dmg;
     RayGun m_shot;
     int jumps;
+    //bool grounded;
 
     private Vector3 jump_direction = Vector3.up;
     private Vector3 right_horizontal = Vector3.up;
@@ -43,6 +44,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Physics.Raycast(transform.position, current_gravity, .5f))
+                //grounded = false;
                 rb.AddForce( jump_direction * jump_height, ForceMode.Impulse);
                 if (jumps % 10 == 0)
                 {
@@ -112,6 +114,7 @@ public class PlayerControls : MonoBehaviour
 
             if (other.gameObject.CompareTag("Right_wall"))
         {
+            //grounded = true;
             g_changed = true;
             gravity_direction = 2;
             current_horizontal = right_horizontal;
@@ -123,6 +126,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Left_wall"))
         {
+            //grounded = true;
             g_changed = true;
             gravity_direction = 4;
             current_horizontal = left_horizontal;
@@ -133,6 +137,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Top_wall"))
         {
+            //grounded = true;
             g_changed = true;
             gravity_direction = 3;
             current_horizontal = top_horizontal;
@@ -143,6 +148,7 @@ public class PlayerControls : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Bottom_wall"))
         {
+            //grounded = true;
             g_changed = true;
             gravity_direction = 1;
             current_horizontal = bottom_horizontal;

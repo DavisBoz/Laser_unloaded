@@ -772,84 +772,6 @@ Transform:
   m_Father: {fileID: 8270462425429574775}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5173799436308880210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5173799436308880211}
-  - component: {fileID: 5173799436308880212}
-  - component: {fileID: 5173799436308880213}
-  - component: {fileID: 5173799436308880214}
-  m_Layer: 8
-  m_Name: PointOfView
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5173799436308880211
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5173799436308880210}
-  m_LocalRotation: {x: -0.00000011870513, y: -0.9063079, z: -0.42261827, w: 0.00000025456401}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
-  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Children: []
-  m_Father: {fileID: 5369551900312731564}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -50, y: -179.99998, z: 0}
---- !u!136 &5173799436308880212
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5173799436308880210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 6.738834
-  m_Direction: 2
-  m_Center: {x: -4.1620461e-13, y: -0.000007064356, z: -3.3693943}
---- !u!114 &5173799436308880213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5173799436308880210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9590580593aca4bf69e365c845f0794a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
-  player: {fileID: 0}
-  ResetBackgroundImageCanvasGroup: {fileID: 0}
-  resetAudio: {fileID: 0}
---- !u!114 &5173799436308880214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5173799436308880210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.1
-  attackDamage: 10
 --- !u!1 &5228027930786097850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1470,7 @@ GameObject:
   - component: {fileID: 5173799435556359896}
   - component: {fileID: 5173799435556359879}
   - component: {fileID: 5173799435556359897}
+  - component: {fileID: 1093487627}
   m_Layer: 8
   m_Name: Alien
   m_TagString: Enemy
@@ -1572,7 +1495,6 @@ Transform:
   - {fileID: 1430585130187282829}
   - {fileID: 7933938661475675663}
   - {fileID: 5393141257852527421}
-  - {fileID: 5173799436308880211}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1586,7 +1508,7 @@ Animator:
   m_GameObject: {fileID: 8997948900119612863}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f90f117f9b4f14564a44824f6c687f1b, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5fb105e4495304035896863d5daa1867, type: 2}
+  m_Controller: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1605,10 +1527,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3
+  m_Radius: 0.3561325
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Center: {x: 0, y: 0.75, z: 0.11509387}
 --- !u!114 &5173799435556359879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1544,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 20
+  Smack: {fileID: 0}
+  Growl: {fileID: 0}
 --- !u!114 &5173799435556359897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,6 +1563,21 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 10
+  alienDeath: {fileID: 0}
+--- !u!136 &1093487627
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997948900119612863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.75
+  m_Height: 0.75
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.75, z: 0.5}
 --- !u!1 &9001421889607337272
 GameObject:
   m_ObjectHideFlags: 0
