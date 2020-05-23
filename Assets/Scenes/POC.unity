@@ -75450,7 +75450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 140
-  jump_height: 30
+  jump_height: 35
   BB8Jump: {fileID: 105614412}
   head: {fileID: 865145871}
   muzzle: {fileID: 1814062539}

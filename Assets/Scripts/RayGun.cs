@@ -7,6 +7,7 @@ public class RayGun : MonoBehaviour
     public GameObject m_shotPrefab;
     public int damageAmount;
     RaycastHit hit;
+    Ray shoot_ray;
     float range = 1000.0f;
     public AudioSource laserSound;
 
@@ -22,7 +23,7 @@ public class RayGun : MonoBehaviour
         void Update()
     {
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             if (Time.time > m_shootRateTimeStamp)
             {
@@ -36,8 +37,9 @@ public class RayGun : MonoBehaviour
 
     void shootRay()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, range, shootableMask))
+        shoot_ray.origin = transform.position;
+        shoot_ray.direction = transform.forward;
+        if (Physics.Raycast(shoot_ray, out hit, range, shootableMask))
         {
             
             GameObject laser = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
@@ -54,7 +56,7 @@ public class RayGun : MonoBehaviour
             GameObject.Destroy(laser, 2f);
 
         }
-        else if(Physics.Raycast(ray, out hit, range))
+        else if(Physics.Raycast(shoot_ray, out hit, range))
         {
             GameObject laser = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
             laser.GetComponent<ShotBehavior>().setTarget(hit.point);

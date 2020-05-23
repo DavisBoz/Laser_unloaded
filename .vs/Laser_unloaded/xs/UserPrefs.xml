@@ -1,13 +1,8 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RayGun.cs">
     <Files>
-      <File FileName="Assets/Scripts/ResetLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RayGun.cs" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" />
-      <File FileName="Assets/Scripts/EnemyHealth.cs" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="46" Column="75" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" />
-      <File FileName="Assets/Scripts/MainMenu.cs" />
+      <File FileName="Assets/Scripts/EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/RayGun.cs" Line="26" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +10,7 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlayerControls.cs" selected="True" />
+                <Node name="RayGun.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -25,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cae95f3b-bc98-43b8-a018-efadee027996" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="72d02e97-f512-4de1-a5a9-5c8643f62419" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

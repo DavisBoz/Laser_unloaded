@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
 
 
         // Reduce the current health by the amount of damage sustained.
-        if(hit<=2)
+        if(hit<=1)
         {
             anim.SetTrigger("Hit");
             hit += 1;
