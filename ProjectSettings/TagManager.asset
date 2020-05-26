@@ -12,6 +12,7 @@ TagManager:
   - Left_wall
   - Top_wall
   - Bottom_wall
+  - DoubleXP
   layers:
   - Default
   - TransparentFX

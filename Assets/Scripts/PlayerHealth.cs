@@ -15,9 +15,9 @@ public class PlayerHealth : MonoBehaviour
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
+    public string loadit;
 
 
-    
     bool isDead;                                                // Whether the player is dead.
     bool damaged;
     float m_Timer;
@@ -26,8 +26,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake()
     {
-        
-       // playerShooting = GetComponentInChildren<PlayerShooting>();
+
+        // playerShooting = GetComponentInChildren<PlayerShooting>();
 
         // Set the initial health of the player.
         currentHealth = startingHealth;
@@ -36,6 +36,9 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+            FailLevel(ResetBackgroundImageCanvasGroup, resetAudio);
+
         // If the player has just been damaged...
         if (damaged)
         {
@@ -65,14 +68,15 @@ public class PlayerHealth : MonoBehaviour
         // Set the health bar's value to the current health.
         healthSlider.value = currentHealth;
 
-        
+
 
         // If the player has lost all it's health and the death flag hasn't been set yet...
         if (currentHealth <= 0 && !isDead)
         {
             // ... it should die.
-            Death();
+            isDead = true;
         }
+
     }
 
 
@@ -90,19 +94,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            SceneManager.LoadScene("POC");
+            SceneManager.LoadScene(loadit);
         }
 
     }
-
-        void Death()
-    {
-        // Set the death flag so this function won't be called again.
-        isDead = true;
-        FailLevel(ResetBackgroundImageCanvasGroup, resetAudio);
-        // Turn off any remaining shooting effects.
-        //playerShooting.DisableEffects();
-
-
-    }
 }
+

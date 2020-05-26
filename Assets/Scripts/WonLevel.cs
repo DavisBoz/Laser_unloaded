@@ -44,7 +44,18 @@ public class WonLevel : MonoBehaviour
 
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            Application.Quit();
+            Scene scene  = SceneManager.GetActiveScene();
+            if (scene.name == "Tutorial")
+            {
+                SceneManager.LoadScene("Lvl 1");
+            }
+
+            else if (scene.name == "Lvl 1")
+            {
+                SceneManager.LoadScene("Lvl 2");
+            }
+            else
+                Application.Quit();
         }
     }
 }

@@ -54,12 +54,11 @@ public class SmoothFollow : MonoBehaviour
         {
             transform.position = target.position;
             transform.position -= currentRotation * Vector3.forward * distance;
-            transform.rotation = Quaternion.AngleAxis(0, Vector3.forward);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.right)
         {
-            print("right wall");
             transform.rotation = Quaternion.Euler(0, 0, 90);
             wantedHeight = target.position.x - height;
             currentHeight = transform.position.x;
@@ -74,7 +73,6 @@ public class SmoothFollow : MonoBehaviour
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.up)
         {
-            print("top wall");
             transform.rotation = Quaternion.Euler(0, 0, 180);
             wantedHeight = target.position.y - height;
             currentHeight = transform.position.y;
@@ -89,7 +87,6 @@ public class SmoothFollow : MonoBehaviour
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.left)
         {
-            print("left wall");
             transform.rotation = Quaternion.Euler(0, 0, 270);
             wantedHeight = target.position.x + height;
             currentHeight = transform.position.x;

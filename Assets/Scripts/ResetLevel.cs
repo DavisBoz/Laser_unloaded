@@ -9,6 +9,7 @@ public class ResetLevel : MonoBehaviour
     public GameObject player;
     public CanvasGroup ResetBackgroundImageCanvasGroup;
     public AudioSource resetAudio;
+    public string loadit;
 
     bool m_IsPlayerAtExit;
     float m_Timer;
@@ -44,7 +45,7 @@ public class ResetLevel : MonoBehaviour
 
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            SceneManager.LoadScene("POC");
+            SceneManager.LoadScene(loadit);
         }
     }
 }
