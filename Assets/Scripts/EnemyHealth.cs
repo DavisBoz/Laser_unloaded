@@ -3,8 +3,7 @@
 public class EnemyHealth : MonoBehaviour
 {
     public int startingHealth = 100;            // The amount of health the enemy starts the game with.
-    public int currentHealth;                   // The current health the enemy has.
-    public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
+    public int currentHealth;                   // The current health the enemy has
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
     bool isDead;
     int hit;
@@ -23,7 +22,6 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-
     public void TakeDamage(int amount)
     {
         if (isDead)
@@ -39,8 +37,6 @@ public class EnemyHealth : MonoBehaviour
         
        
         currentHealth -= amount;
-
-        
 
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)

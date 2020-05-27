@@ -3,9 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayLvl1()
     {
         SceneManager.LoadScene("Lvl 1");
+    }
+
+    public void PlayLvl2()
+    {
+        SceneManager.LoadScene("Lvl 2");
     }
 
     public void PlayTutorial()

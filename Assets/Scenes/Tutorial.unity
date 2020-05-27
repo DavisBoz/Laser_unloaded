@@ -606,12 +606,18 @@ PrefabInstance:
     - target: {fileID: 4441437405873565763, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441437405873565763, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5262043435025248282, guid: 7328c79242c7847b7bb49b25b447edf9, type: 3}
     - {fileID: 0}
     - {fileID: 5262043433504507244, guid: 7328c79242c7847b7bb49b25b447edf9, type: 3}
+    - {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7328c79242c7847b7bb49b25b447edf9, type: 3}
 --- !u!1 &6137105 stripped
 GameObject:
@@ -644,8 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 140
-  jump_height: 20
-  BB8Jump: {fileID: 781166312}
+  jump_height: 15
   head: {fileID: 6137107}
   muzzle: {fileID: 6137106}
   current_gravity: {x: 0, y: -1, z: 0}
@@ -9386,12 +9391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9590580593aca4bf69e365c845f0794a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
   player: {fileID: 6137105}
-  ResetBackgroundImageCanvasGroup: {fileID: 412133208}
-  resetAudio: {fileID: 1730615602}
-  loadit: Tutorial
 --- !u!65 &460043058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15966,11 +15966,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 7188730083475787337, guid: 47aee2b8b3a124aa388d1bc55989945b,
-        type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alienDeath
       value: 
-      objectReference: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
+      objectReference: {fileID: 2057240285}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: Smack
+      value: 
+      objectReference: {fileID: 1447783992}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: Growl
+      value: 
+      objectReference: {fileID: 800385869}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6137105}
     - target: {fileID: 8503611912507330902, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_Layer
@@ -15990,6 +16005,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188730083475787337, guid: 47aee2b8b3a124aa388d1bc55989945b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5110984580564048059, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -16175,42 +16215,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: alienDeath
-      value: 
-      objectReference: {fileID: 2057240285}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: Smack
-      value: 
-      objectReference: {fileID: 1447783992}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: Growl
-      value: 
-      objectReference: {fileID: 800385869}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: attackDamage
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!4 &846696401 stripped
@@ -16219,25 +16223,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 846696400}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &846696402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4256506332590330144, guid: 47aee2b8b3a124aa388d1bc55989945b,
-    type: 3}
-  m_PrefabInstance: {fileID: 846696400}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &846696403
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846696402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0.65, z: 0.45}
 --- !u!1 &847230791
 GameObject:
   m_ObjectHideFlags: 0
@@ -17401,11 +17386,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 7188730083475787337, guid: 47aee2b8b3a124aa388d1bc55989945b,
-        type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alienDeath
       value: 
-      objectReference: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
+      objectReference: {fileID: 2057240285}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: Smack
+      value: 
+      objectReference: {fileID: 1447783992}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: Growl
+      value: 
+      objectReference: {fileID: 800385869}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6137105}
     - target: {fileID: 8503611912507330902, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_Layer
@@ -17425,6 +17425,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188730083475787337, guid: 47aee2b8b3a124aa388d1bc55989945b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5110984580564048059, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -17610,42 +17635,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: alienDeath
-      value: 
-      objectReference: {fileID: 2057240285}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: Smack
-      value: 
-      objectReference: {fileID: 1447783992}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: Growl
-      value: 
-      objectReference: {fileID: 800385869}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: attackDamage
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!4 &916079101 stripped
@@ -17654,25 +17643,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 916079100}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &916079102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4256506332590330144, guid: 47aee2b8b3a124aa388d1bc55989945b,
-    type: 3}
-  m_PrefabInstance: {fileID: 916079100}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &916079103
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916079102}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0.65, z: 0.45}
 --- !u!1 &919632988
 GameObject:
   m_ObjectHideFlags: 0
@@ -18702,7 +18672,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983884270}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
@@ -23367,6 +23337,11 @@ PrefabInstance:
       propertyPath: Growl
       value: 
       objectReference: {fileID: 800385869}
+    - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6137105}
     m_RemovedComponents:
     - {fileID: 1093487627, guid: 7d7b1cf286f94457ba43ae6a6572bd15, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d7b1cf286f94457ba43ae6a6572bd15, type: 3}
@@ -23376,25 +23351,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1232329724}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1232329726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8997948900119612863, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
-    type: 3}
-  m_PrefabInstance: {fileID: 1232329724}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1232329727
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232329726}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0.65, z: 0.45}
 --- !u!1 &1235145900
 GameObject:
   m_ObjectHideFlags: 0
@@ -24661,11 +24617,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7188730083475787337, guid: 47aee2b8b3a124aa388d1bc55989945b,
-        type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alienDeath
       value: 
-      objectReference: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
+      objectReference: {fileID: 2057240285}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: Smack
+      value: 
+      objectReference: {fileID: 1447783992}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: Growl
+      value: 
+      objectReference: {fileID: 800385869}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6137105}
     - target: {fileID: 8503611912507330902, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
       propertyPath: m_Layer
@@ -24685,6 +24656,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188730083475787337, guid: 47aee2b8b3a124aa388d1bc55989945b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f7f9ac2f428394731a18e9c33566c09a, type: 2}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5110984580564048059, guid: 47aee2b8b3a124aa388d1bc55989945b,
         type: 3}
@@ -24870,42 +24866,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818594, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: m_Center.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: alienDeath
-      value: 
-      objectReference: {fileID: 2057240285}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: Smack
-      value: 
-      objectReference: {fileID: 1447783992}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: Growl
-      value: 
-      objectReference: {fileID: 800385869}
-    - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
-      propertyPath: attackDamage
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
 --- !u!4 &1278536624 stripped
@@ -24914,25 +24874,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1278536623}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1278536625 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4256506332590330144, guid: 47aee2b8b3a124aa388d1bc55989945b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1278536623}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1278536626
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278536625}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0.65, z: 0.45}
 --- !u!1 &1280743880
 GameObject:
   m_ObjectHideFlags: 0
@@ -31587,12 +31528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9590580593aca4bf69e365c845f0794a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
   player: {fileID: 6137105}
-  ResetBackgroundImageCanvasGroup: {fileID: 412133208}
-  resetAudio: {fileID: 1730615602}
-  loadit: Tutorial
 --- !u!65 &1738726687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35896,12 +35832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9590580593aca4bf69e365c845f0794a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
   player: {fileID: 6137105}
-  ResetBackgroundImageCanvasGroup: {fileID: 412133208}
-  resetAudio: {fileID: 1730615602}
-  loadit: Tutorial
 --- !u!65 &1992083496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37904,12 +37835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9590580593aca4bf69e365c845f0794a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
   player: {fileID: 6137105}
-  ResetBackgroundImageCanvasGroup: {fileID: 412133208}
-  resetAudio: {fileID: 1730615602}
-  loadit: Tutorial
 --- !u!65 &2097989719
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 // Place the script in the Camera-Control group in the component menu
 [AddComponentMenu("Camera-Control/Smooth Follow CSharp")]
@@ -25,7 +24,6 @@ public class SmoothFollow : MonoBehaviour
     public float height = 5.0f;
     // How much we 
     public float heightDamping = 2.0f;
-    public float rotationDamping = 3.0f;
 
     void LateUpdate()
     {

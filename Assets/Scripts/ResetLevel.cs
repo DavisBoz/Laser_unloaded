@@ -1,19 +1,20 @@
 ﻿
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ResetLevel : MonoBehaviour
 {
-    public float fadeDuration = 1f;
-    public float displayImageDuration = 1f;
     public GameObject player;
-    public CanvasGroup ResetBackgroundImageCanvasGroup;
-    public AudioSource resetAudio;
-    public string loadit;
 
+    PlayerHealth playerHealth;
     bool m_IsPlayerAtExit;
-    float m_Timer;
-    bool m_hasAudioPlayed;
+    
+
+    void Awake()
+    {
+        // Setting up the references
+        playerHealth = player.GetComponent<PlayerHealth>();
+        
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,26 +28,9 @@ public class ResetLevel : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
-            FailLevel(ResetBackgroundImageCanvasGroup, resetAudio);
+            playerHealth.TakeDamage(150);
         }
     }
 
-    void FailLevel(CanvasGroup imageCanvasGroup, AudioSource audioSource)
-    {
-        if (!m_hasAudioPlayed)
-        {
-            audioSource.Play();
-            m_hasAudioPlayed = true;
-        }
-
-        m_Timer += Time.deltaTime;
-
-        imageCanvasGroup.alpha = m_Timer / fadeDuration;
-
-        if (m_Timer > fadeDuration + displayImageDuration)
-        {
-            SceneManager.LoadScene(loadit);
-        }
-    }
 }
 

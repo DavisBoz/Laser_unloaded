@@ -6,7 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public float displayImageDuration = 1f;
-    public GameObject player;
     public CanvasGroup ResetBackgroundImageCanvasGroup;
     public AudioSource resetAudio;
     public int startingHealth = 100;                            // The amount of health the player starts the game with.

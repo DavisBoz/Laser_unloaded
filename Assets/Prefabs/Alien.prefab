@@ -1470,7 +1470,7 @@ GameObject:
   - component: {fileID: 5173799435556359896}
   - component: {fileID: 5173799435556359879}
   - component: {fileID: 5173799435556359897}
-  - component: {fileID: 1093487627}
+  - component: {fileID: 1790087127}
   m_Layer: 8
   m_Name: Alien
   m_TagString: Enemy
@@ -1564,8 +1564,8 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   alienDeath: {fileID: 0}
---- !u!136 &1093487627
-CapsuleCollider:
+--- !u!135 &1790087127
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1574,10 +1574,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.75
-  m_Height: 0.75
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.75, z: 0.5}
+  m_Center: {x: 0, y: 0.65, z: 0.45}
 --- !u!1 &9001421889607337272
 GameObject:
   m_ObjectHideFlags: 0
