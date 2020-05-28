@@ -83,38 +83,9 @@ public class PlayerControls : MonoBehaviour
         head.transform.position = transform.position;
     }
 
-    void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("DoubleDamage"))
-        {
-            other.gameObject.SetActive(false);
-            m_shot = muzzle.GetComponent<RayGun>();
-            m_shot.damageAmount *= 2;
-            //print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
-        }
-
-        if (other.gameObject.CompareTag("ExtraHealth"))
-        {
-            other.gameObject.SetActive(false);
-            rb.gameObject.GetComponent<PlayerHealth>().currentHealth += 50;
-            //print("Player got extra health");
-
-        }
-
-        if (other.gameObject.CompareTag("SpeedUp"))
-        {
-            other.gameObject.SetActive(false);
-            speed += 30;
-            //print("Player got more speed");
-        }
-
-        if (other.gameObject.CompareTag("DoubleXP"))
-        {
-            other.gameObject.SetActive(false);
-            ScoreManager.score *= 2;
-            //print("Doubled XP, from " + ScoreManager.score / 2 + " to " + ScoreManager.score);
-        }
-
         if (other.gameObject.CompareTag("Right_wall"))
         {
             g_changed = true;
@@ -158,6 +129,41 @@ public class PlayerControls : MonoBehaviour
             deceleration = new Vector3(.5f, 1f, .5f);
             head.transform.rotation = Quaternion.Euler(-90, -45, 0);
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("DoubleDamage"))
+        {
+            other.gameObject.SetActive(false);
+            m_shot = muzzle.GetComponent<RayGun>();
+            m_shot.damageAmount *= 2;
+            //print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
+        }
+
+        if (other.gameObject.CompareTag("ExtraHealth"))
+        {
+            other.gameObject.SetActive(false);
+            rb.gameObject.GetComponent<PlayerHealth>().currentHealth += 50;
+            //print("Player got extra health");
+
+        }
+
+        if (other.gameObject.CompareTag("SpeedUp"))
+        {
+            other.gameObject.SetActive(false);
+            speed += 30;
+            //print("Player got more speed");
+        }
+
+        if (other.gameObject.CompareTag("DoubleXP"))
+        {
+            other.gameObject.SetActive(false);
+            ScoreManager.score *= 2;
+            //print("Doubled XP, from " + ScoreManager.score / 2 + " to " + ScoreManager.score);
+        }
+
+        
     }
 
 }
