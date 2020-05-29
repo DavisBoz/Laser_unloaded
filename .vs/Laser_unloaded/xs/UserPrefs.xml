@@ -5,9 +5,9 @@
       <File FileName="Assets/Scripts/EnemyAttack.cs" />
       <File FileName="Assets/Scripts/ResetLevel.cs" />
       <File FileName="Assets/Scripts/EnemyHealth.cs" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="87" Column="50" />
-      <File FileName="Assets/Scripts/textManage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="14" Column="9" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="64" Column="9" />
+      <File FileName="Assets/Scripts/textManage.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5e044db4-c9e4-453d-917f-8da057d72d66" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cd2bcaf0-fbe3-43c8-9c8d-bf99ce91cee6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

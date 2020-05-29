@@ -9,15 +9,14 @@ public class PlayerControls : MonoBehaviour
     public static int gravity_direction = 1;
     public static int previous_direction = 1;
     public static bool g_changed = false;
-    //public AudioSource BB8Jump;
     public GameObject head;
     public GameObject muzzle;
     public Vector3 current_gravity = Vector3.down;
     RayGun m_shot;
-    //int jumps;
     float moveHorizontal;
     float moveVertical;
     bool canJump;
+    bool grounded;
 
     private Vector3 jump_direction = Vector3.up;
     private Vector3 right_horizontal = Vector3.up;
@@ -43,8 +42,10 @@ public class PlayerControls : MonoBehaviour
 
         if (canJump)
         {
+            rb.velocity = new Vector3(0, 0, 0);
             rb.AddForce(jump_direction * jump_height, ForceMode.Impulse);
             canJump = false;
+            grounded = false;
         }
 
         if (Input.GetKeyDown(KeyCode.RightAlt))
@@ -64,16 +65,16 @@ public class PlayerControls : MonoBehaviour
 
         rb.AddForce(current_gravity * 30);
         rb.AddForce(Vector3.forward * speed);
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
-            if (Physics.Raycast(rb.transform.position, current_gravity, .5f))
-                canJump = true;
-            
+            canJump = true;
         }
+
         if (g_changed)
         {
             previous_direction = gravity_direction;
@@ -88,6 +89,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Right_wall"))
         {
+            grounded = true;
             g_changed = true;
             gravity_direction = 2;
             current_horizontal = right_horizontal;
@@ -99,6 +101,7 @@ public class PlayerControls : MonoBehaviour
 
         if (other.gameObject.CompareTag("Left_wall"))
         {
+            grounded = true;
             g_changed = true;
             gravity_direction = 4;
             current_horizontal = left_horizontal;
@@ -110,6 +113,7 @@ public class PlayerControls : MonoBehaviour
 
         if (other.gameObject.CompareTag("Top_wall"))
         {
+            grounded = true;
             g_changed = true;
             gravity_direction = 3;
             current_horizontal = top_horizontal;
@@ -121,6 +125,7 @@ public class PlayerControls : MonoBehaviour
 
         if (other.gameObject.CompareTag("Bottom_wall"))
         {
+            grounded = true;
             g_changed = true;
             gravity_direction = 1;
             current_horizontal = bottom_horizontal;
