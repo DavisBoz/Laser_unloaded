@@ -1,18 +1,17 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ResetLevel : MonoBehaviour
 {
     public GameObject player;
 
-    PlayerHealth playerHealth;
-    bool m_IsPlayerAtExit;
+    PlayerHealth player_health;
+    bool at_exit;
     
 
     void Awake()
     {
         // Setting up the references
-        playerHealth = player.GetComponent<PlayerHealth>();
+        player_health = player.GetComponent<PlayerHealth>();
         
     }
 
@@ -20,15 +19,15 @@ public class ResetLevel : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            m_IsPlayerAtExit = true;
+            at_exit = true;
         }
     }
 
     void Update()
     {
-        if (m_IsPlayerAtExit)
+        if (at_exit)
         {
-            playerHealth.TakeDamage(150);
+            player_health.TakeDamage(150);
         }
     }
 

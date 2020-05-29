@@ -63,12 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Boss_Level.cs" />
+    <Compile Include="Assets\Scripts\BossLevel.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Platform_Xmorph.cs" />
-    <Compile Include="Assets\Scripts\Platform_Zmorph.cs" />
+    <Compile Include="Assets\Scripts\PlatformXmorph.cs" />
+    <Compile Include="Assets\Scripts\PlatformZmorph.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\RayGun.cs" />
@@ -76,7 +76,7 @@
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
-    <Compile Include="Assets\Scripts\textManage.cs" />
+    <Compile Include="Assets\Scripts\TextManage.cs" />
     <Compile Include="Assets\Scripts\WonLevel.cs" />
     <Compile Include="Assets\UI\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\UI\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

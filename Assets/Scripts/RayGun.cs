@@ -2,22 +2,22 @@
 
 public class RayGun : MonoBehaviour
 {
-    public float shootRate;
-    int shootableMask;
-    public GameObject m_shotPrefab;
-    public int damageAmount;
+    public float shoot_rate;
+    int shootable_mask;
+    public GameObject m_shot_prefab;
+    public int damage_amount;
     RaycastHit hit;
     Ray shoot_ray;
     float range = 1000.0f;
-    public AudioSource laserSound;
+    public AudioSource laser_sound;
 
-    private float m_shootRateTimeStamp;
+    private float shoot_rate_time;
 
 
     void Awake()
     {
         // Create a layer mask for the Shootable layer.
-        shootableMask = LayerMask.GetMask("Shootable");
+        shootable_mask = LayerMask.GetMask("Shootable");
     }
 
         void Update()
@@ -25,11 +25,11 @@ public class RayGun : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            if (Time.time > m_shootRateTimeStamp)
+            if (Time.time > shoot_rate_time)
             {
-                laserSound.Play();
+                laser_sound.Play();
                 shootRay();
-                m_shootRateTimeStamp = Time.time + shootRate;
+                shoot_rate_time = Time.time + shoot_rate;
             }
         }
 
@@ -39,18 +39,18 @@ public class RayGun : MonoBehaviour
     {
         shoot_ray.origin = transform.position;
         shoot_ray.direction = transform.forward;
-        if (Physics.Raycast(shoot_ray, out hit, range, shootableMask))
+        if (Physics.Raycast(shoot_ray, out hit, range, shootable_mask))
         {
             
-            GameObject laser = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
+            GameObject laser = GameObject.Instantiate(m_shot_prefab, transform.position, transform.rotation) as GameObject;
             laser.GetComponent<ShotBehavior>().setTarget(hit.point);
-            EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+            EnemyHealth enemy_health = hit.collider.GetComponent<EnemyHealth>();
 
             // If the EnemyHealth component exist...
-            if (enemyHealth != null)
+            if (enemy_health != null)
             {
                 // ... the enemy should take damage.
-                enemyHealth.TakeDamage(damageAmount);
+                enemy_health.TakeDamage(damage_amount);
             }
             
             GameObject.Destroy(laser, 2f);
@@ -58,7 +58,7 @@ public class RayGun : MonoBehaviour
         }
         else if(Physics.Raycast(shoot_ray, out hit, range))
         {
-            GameObject laser = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
+            GameObject laser = GameObject.Instantiate(m_shot_prefab, transform.position, transform.rotation) as GameObject;
             laser.GetComponent<ShotBehavior>().setTarget(hit.point);
             GameObject.Destroy(laser, 2f);
         }

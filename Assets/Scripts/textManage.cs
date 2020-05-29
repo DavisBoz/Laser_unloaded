@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class textManage : MonoBehaviour
+public class TextManage : MonoBehaviour
 {
     public bool startVal;
     public GameObject plane;

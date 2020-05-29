@@ -4,23 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float fadeDuration = 1f;
-    public float displayImageDuration = 1f;
-    public CanvasGroup ResetBackgroundImageCanvasGroup;
-    public AudioSource resetAudio;
-    public int startingHealth = 100;                            // The amount of health the player starts the game with.
-    public int currentHealth;                                   // The current health the player has.
-    public Slider healthSlider;                                 // Reference to the UI's health bar.
-    public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt
-    public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
-    public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
-    public string loadit;
+    public float fade_duration = 1f;
+    public float image_duration = 1f;
+    public CanvasGroup reset_image;
+    public AudioSource reset_audio;
+    public int starting_health = 100;                            // The amount of health the player starts the game with.
+    public int current_health;                                   // The current health the player has.
+    public Slider health_slider;                                 // Reference to the UI's health bar.
+    public Image damage_image;                                   // Reference to an image to flash on the screen on being hurt
+    public float flash_speed = 5f;                               // The speed the damage_image will fade at.
+    public Color flash_colour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damage_image is set to, to flash.
+    public string load_this;
 
 
-    bool isDead;                                                // Whether the player is dead.
+    bool is_dead;                                                // Whether the player is dead.
     bool damaged;
-    float m_Timer;
-    bool m_hasAudioPlayed;                              // True when the player gets damaged.
+    float timer;
+    bool audio_played;                              // True when the player gets damaged.
 
 
     void Awake()
@@ -29,26 +29,26 @@ public class PlayerHealth : MonoBehaviour
         // playerShooting = GetComponentInChildren<PlayerShooting>();
 
         // Set the initial health of the player.
-        currentHealth = startingHealth;
+        current_health = starting_health;
     }
 
 
     void Update()
     {
-        if (isDead)
-            FailLevel(ResetBackgroundImageCanvasGroup, resetAudio);
+        if (is_dead)
+            FailLevel(reset_image, reset_audio);
 
         // If the player has just been damaged...
         if (damaged)
         {
             // ... set the colour of the damageImage to the flash colour.
-            damageImage.color = flashColour;
+            damage_image.color = flash_colour;
         }
         // Otherwise...
         else
         {
             // ... transition the colour back to clear.
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            damage_image.color = Color.Lerp(damage_image.color, Color.clear, flash_speed * Time.deltaTime);
         }
 
         // Reset the damaged flag.
@@ -62,38 +62,38 @@ public class PlayerHealth : MonoBehaviour
         damaged = true;
 
         // Reduce the current health by the damage amount.
-        currentHealth -= amount;
+        current_health -= amount;
 
         // Set the health bar's value to the current health.
-        healthSlider.value = currentHealth;
+        health_slider.value = current_health;
 
 
 
         // If the player has lost all it's health and the death flag hasn't been set yet...
-        if (currentHealth <= 0 && !isDead)
+        if (current_health <= 0 && !is_dead)
         {
             // ... it should die.
-            isDead = true;
+            is_dead = true;
         }
 
     }
 
 
-    void FailLevel(CanvasGroup imageCanvasGroup, AudioSource audioSource)
+    void FailLevel(CanvasGroup image_canvas, AudioSource audio_source)
     {
-        if (!m_hasAudioPlayed)
+        if (!audio_played)
         {
-            audioSource.Play();
-            m_hasAudioPlayed = true;
+            audio_source.Play();
+            audio_played = true;
         }
 
-        m_Timer += Time.deltaTime;
+        timer += Time.deltaTime;
 
-        imageCanvasGroup.alpha = m_Timer / fadeDuration;
+        image_canvas.alpha = timer / fade_duration;
 
-        if (m_Timer > fadeDuration + displayImageDuration)
+        if (timer > fade_duration + image_duration)
         {
-            SceneManager.LoadScene(loadit);
+            SceneManager.LoadScene(load_this);
         }
 
     }

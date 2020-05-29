@@ -436,10 +436,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  scoreValue: 10
-  alienDeath: {fileID: 1307386344}
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 1307386344}
 --- !u!114 &92998327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,8 +452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attack_interval: 0.5
+  attack_damage: 10
   Smack: {fileID: 1158485177}
   Growl: {fileID: 729286696}
   player: {fileID: 721056896904141724}
@@ -875,10 +875,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  scoreValue: 10
-  alienDeath: {fileID: 1307386344}
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 1307386344}
 --- !u!114 &184552216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,8 +891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attack_interval: 0.5
+  attack_damage: 10
   Smack: {fileID: 1158485177}
   Growl: {fileID: 729286696}
   player: {fileID: 721056896904141724}
@@ -1045,11 +1045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e78036e2e90f40188fd590d5291c890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
+  fade_duration: 1
+  image_duration: 1
   player: {fileID: 721056896904141724}
-  WonBackgroundImageCanvasGroup: {fileID: 1819526440}
-  wonAudio: {fileID: 1698513810}
+  won_background_image_canvas: {fileID: 1819526440}
+  won_audio: {fileID: 1698513810}
 --- !u!1 &238023199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1653,11 @@ PrefabInstance:
     - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
@@ -2761,10 +2766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  scoreValue: 10
-  alienDeath: {fileID: 1307386344}
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 1307386344}
 --- !u!114 &554019670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2777,8 +2782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attack_interval: 0.5
+  attack_damage: 10
   Smack: {fileID: 1158485177}
   Growl: {fileID: 729286696}
   player: {fileID: 721056896904141724}
@@ -3062,10 +3067,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  scoreValue: 10
-  alienDeath: {fileID: 1307386344}
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 1307386344}
 --- !u!114 &652335626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3078,8 +3083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attack_interval: 0.5
+  attack_damage: 10
   Smack: {fileID: 1158485177}
   Growl: {fileID: 729286696}
   player: {fileID: 721056896904141724}
@@ -3286,6 +3291,11 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: Smack
@@ -3465,6 +3475,11 @@ PrefabInstance:
     - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
@@ -4518,10 +4533,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  scoreValue: 10
-  alienDeath: {fileID: 1307386344}
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 1307386344}
 --- !u!114 &918466709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4534,8 +4549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attack_interval: 0.5
+  attack_damage: 10
   Smack: {fileID: 1158485177}
   Growl: {fileID: 729286696}
   player: {fileID: 721056896904141724}
@@ -5628,7 +5643,7 @@ MonoBehaviour:
   target: {fileID: 721056896904141731}
   distance: 6
   height: 2
-  heightDamping: 2
+  height_damping: 2
 --- !u!81 &1287471592
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5698,10 +5713,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  scoreValue: 10
-  alienDeath: {fileID: 1307386344}
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 1307386344}
 --- !u!114 &1302626488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5714,8 +5729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attack_interval: 0.5
+  attack_damage: 10
   Smack: {fileID: 1158485177}
   Growl: {fileID: 729286696}
   player: {fileID: 721056896904141724}
@@ -14875,6 +14890,11 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: Smack
@@ -14965,95 +14985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+    - target: {fileID: 4829897237896517634, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
-      propertyPath: ResetBackgroundImageCanvasGroup
-      value: 
-      objectReference: {fileID: 1515250441}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: resetAudio
-      value: 
-      objectReference: {fileID: 1384248033}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 273046167}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 1163859973}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: loadit
-      value: Lvl 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: damageAmount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: shootRate
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: laserSound
-      value: 
-      objectReference: {fileID: 721855410}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5051389425419309938, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
@@ -15089,6 +15024,111 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: ResetBackgroundImageCanvasGroup
+      value: 
+      objectReference: {fileID: 1515250441}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: resetAudio
+      value: 
+      objectReference: {fileID: 1384248033}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 273046167}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1163859973}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: loadit
+      value: Lvl 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_image
+      value: 
+      objectReference: {fileID: 1515250441}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_audio
+      value: 
+      objectReference: {fileID: 1384248033}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: health_slider
+      value: 
+      objectReference: {fileID: 273046167}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_image
+      value: 
+      objectReference: {fileID: 1163859973}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: load_this
+      value: Lvl 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damageAmount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: shootRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: laserSound
+      value: 
+      objectReference: {fileID: 721855410}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_shot_prefab
+      value: 
+      objectReference: {fileID: 136330, guid: 9a0c3383523899643a8d0661cfaca4e4, type: 3}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: laser_sound
+      value: 
+      objectReference: {fileID: 721855410}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_amount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: shoot_rate
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7258785542491901537, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
@@ -15140,14 +15180,39 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4829897237896517634, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 5262043433504507246, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5262043435368345323, guid: 7328c79242c7847b7bb49b25b447edf9,

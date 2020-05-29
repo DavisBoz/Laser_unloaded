@@ -322,95 +322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+    - target: {fileID: 4829897237896517634, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
-      propertyPath: ResetBackgroundImageCanvasGroup
-      value: 
-      objectReference: {fileID: 412133208}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: resetAudio
-      value: 
-      objectReference: {fileID: 1730615602}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1097095915}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 120798264}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: loadit
-      value: Tutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: damageAmount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: shootRate
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: laserSound
-      value: 
-      objectReference: {fileID: 1074507186}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5051389425419309938, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
@@ -447,6 +362,111 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: ResetBackgroundImageCanvasGroup
+      value: 
+      objectReference: {fileID: 412133208}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: resetAudio
+      value: 
+      objectReference: {fileID: 1730615602}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1097095915}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 120798264}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: loadit
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_image
+      value: 
+      objectReference: {fileID: 412133208}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_audio
+      value: 
+      objectReference: {fileID: 1730615602}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: health_slider
+      value: 
+      objectReference: {fileID: 1097095915}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_image
+      value: 
+      objectReference: {fileID: 120798264}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: load_this
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damageAmount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: shootRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: laserSound
+      value: 
+      objectReference: {fileID: 1074507186}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: shoot_rate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_shot_prefab
+      value: 
+      objectReference: {fileID: 136330, guid: 9a0c3383523899643a8d0661cfaca4e4, type: 3}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_amount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: laser_sound
+      value: 
+      objectReference: {fileID: 1074507186}
     - target: {fileID: 7258785542491901537, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -497,11 +517,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4829897237896517634, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 2394968357450351178, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_CastShadows
@@ -520,6 +535,36 @@ PrefabInstance:
     - target: {fileID: 5262043433504507246, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5262043435368345323, guid: 7328c79242c7847b7bb49b25b447edf9,
@@ -15848,6 +15893,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 2057240285}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 2057240285}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -17266,6 +17315,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 2057240285}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 2057240285}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -23177,6 +23230,11 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 2057240285}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 2057240285}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: Smack
@@ -24469,6 +24527,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 2057240285}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 2057240285}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -26113,11 +26175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e78036e2e90f40188fd590d5291c890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
+  fade_duration: 1
+  image_duration: 1
   player: {fileID: 6137105}
-  WonBackgroundImageCanvasGroup: {fileID: 1480057919}
-  wonAudio: {fileID: 1927204811}
+  won_background_image_canvas: {fileID: 1480057919}
+  won_audio: {fileID: 1927204811}
 --- !u!65 &1373708273
 BoxCollider:
   m_ObjectHideFlags: 0

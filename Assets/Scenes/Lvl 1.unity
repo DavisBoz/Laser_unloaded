@@ -1335,6 +1335,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -2942,11 +2946,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e78036e2e90f40188fd590d5291c890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 1
-  displayImageDuration: 1
+  fade_duration: 1
+  image_duration: 1
   player: {fileID: 721056896904141724}
-  WonBackgroundImageCanvasGroup: {fileID: 1819526440}
-  wonAudio: {fileID: 1698513810}
+  won_background_image_canvas: {fileID: 1819526440}
+  won_audio: {fileID: 1698513810}
 --- !u!1 &210319554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3215,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -5906,6 +5914,11 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: Smack
@@ -6318,6 +6331,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -7576,6 +7593,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -9828,6 +9849,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -10100,6 +10125,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -18307,6 +18336,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -18857,6 +18890,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -19221,6 +19258,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -20309,6 +20350,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -20711,6 +20756,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -20983,6 +21032,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -25169,6 +25222,10 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: Smack
       value: 
@@ -25513,7 +25570,7 @@ MonoBehaviour:
   target: {fileID: 721056896904141731}
   distance: 6
   height: 2
-  heightDamping: 2
+  height_damping: 2
 --- !u!81 &2029300139
 AudioListener:
   m_ObjectHideFlags: 0
@@ -25862,6 +25919,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -26401,6 +26462,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
       propertyPath: alienDeath
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 1793818596, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
+      propertyPath: alien_death
       value: 
       objectReference: {fileID: 1307386344}
     - target: {fileID: 1793818593, guid: 47aee2b8b3a124aa388d1bc55989945b, type: 3}
@@ -27542,6 +27607,11 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5173799435556359897, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
+        type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
     - target: {fileID: 5173799435556359879, guid: 7d7b1cf286f94457ba43ae6a6572bd15,
         type: 3}
       propertyPath: Smack
@@ -27646,6 +27716,31 @@ PrefabInstance:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1163859973}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_image
+      value: 
+      objectReference: {fileID: 1515250441}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_audio
+      value: 
+      objectReference: {fileID: 1384248033}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: health_slider
+      value: 
+      objectReference: {fileID: 273046167}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_image
+      value: 
+      objectReference: {fileID: 1163859973}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: load_this
+      value: Lvl 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_Drag
@@ -27656,6 +27751,26 @@ PrefabInstance:
       propertyPath: laserSound
       value: 
       objectReference: {fileID: 721855410}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: shoot_rate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: laser_sound
+      value: 
+      objectReference: {fileID: 721855410}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_amount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_shot_prefab
+      value: 
+      objectReference: {fileID: 136330, guid: 9a0c3383523899643a8d0661cfaca4e4, type: 3}
     - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: BB8Jump

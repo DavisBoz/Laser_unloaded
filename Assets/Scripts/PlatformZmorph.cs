@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Platform_Zmorph : MonoBehaviour
+public class PlatformZmorph : MonoBehaviour
 {
     private float zpos = 1.02f;
     private float zmax;

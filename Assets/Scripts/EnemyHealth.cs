@@ -2,29 +2,29 @@
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int startingHealth = 100;            // The amount of health the enemy starts the game with.
-    public int currentHealth;                   // The current health the enemy has
-    public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
-    bool isDead;
+    public int starting_health = 100;            // The amount of health the enemy starts the game with.
+    public int current_health;                   // The current health the enemy has
+    public int score_value = 10;                 // The amount added to the player's score when the enemy dies.
+    bool is_dead;
     int hit;
 
-    CapsuleCollider capsuleCollider;
+    CapsuleCollider capsule_collider;
     Animator anim;                              // Reference to the animator.
-    public AudioSource alienDeath;
+    public AudioSource alien_death;
 
 
     void Awake()
     {
         // Setting up the references.
         anim = GetComponent<Animator>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
+        capsule_collider = GetComponent<CapsuleCollider>();
         // Setting the current health when the enemy first spawns.
-        currentHealth = startingHealth;
+        current_health = starting_health;
     }
 
     public void TakeDamage(int amount)
     {
-        if (isDead)
+        if (is_dead)
             return;
 
 
@@ -36,10 +36,10 @@ public class EnemyHealth : MonoBehaviour
         }
         
        
-        currentHealth -= amount;
+        current_health -= amount;
 
         // If the current health is less than or equal to zero...
-        if (currentHealth <= 0)
+        if (current_health <= 0)
         {
             // ... the enemy is dead.
             Death();
@@ -49,14 +49,14 @@ public class EnemyHealth : MonoBehaviour
 
     void Death()
     {
-        isDead = true;
+        is_dead = true;
         // Tell the animator that the enemy is dead.
 
-        alienDeath.Play();
+        alien_death.Play();
         anim.SetTrigger("Dead");
-        capsuleCollider.isTrigger = true;
+        capsule_collider.isTrigger = true;
         Destroy(gameObject, 1.5f);
-        ScoreManager.score += scoreValue;
+        ScoreManager.score += score_value;
     }
 
 }

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Platform_Xmorph : MonoBehaviour
+public class PlatformXmorph : MonoBehaviour
 {
     private float xpos = 2f;
     private float xmax;

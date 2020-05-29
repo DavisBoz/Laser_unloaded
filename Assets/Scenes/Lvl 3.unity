@@ -1335,6 +1335,31 @@ PrefabInstance:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1856506376}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_image
+      value: 
+      objectReference: {fileID: 1233919638}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: reset_audio
+      value: 
+      objectReference: {fileID: 1779181297}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: health_slider
+      value: 
+      objectReference: {fileID: 1653488366}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_image
+      value: 
+      objectReference: {fileID: 1856506376}
+    - target: {fileID: 5262043433504507245, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: load_this
+      value: Lvl 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5262043433504507247, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: m_Drag
@@ -1344,6 +1369,41 @@ PrefabInstance:
         type: 3}
       propertyPath: laserSound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: shoot_rate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_shot_prefab
+      value: 
+      objectReference: {fileID: 136330, guid: 9a0c3383523899643a8d0661cfaca4e4, type: 3}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: damage_amount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043434677085744, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: laser_sound
+      value: 
+      objectReference: {fileID: 2060018982}
+    - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: BB8Jump
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: jump_height
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069695503384583554, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: jump_height
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
@@ -1359,21 +1419,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: BB8Jump
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: jump_height
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069695503384583554, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: jump_height
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8069695503384583554, guid: 7328c79242c7847b7bb49b25b447edf9, type: 3}
@@ -1670,7 +1715,7 @@ MonoBehaviour:
   target: {fileID: 1328015229}
   distance: 6
   height: 2
-  heightDamping: 2
+  height_damping: 2
 --- !u!1 &1540356184
 GameObject:
   m_ObjectHideFlags: 0

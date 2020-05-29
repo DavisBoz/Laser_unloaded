@@ -7,7 +7,7 @@ public class PlayerControls : MonoBehaviour
     public float speed;
     public float jump_height;
     public static int gravity_direction = 1;
-    public static int previous_direction = 1;
+    //public static int previous_direction = 1;
     public static bool g_changed = false;
     public GameObject head;
     public GameObject muzzle;
@@ -75,11 +75,11 @@ public class PlayerControls : MonoBehaviour
             canJump = true;
         }
 
-        if (g_changed)
+        /*if (g_changed)
         {
             previous_direction = gravity_direction;
             g_changed = false;
-        }
+        }*/
 
         head.transform.position = transform.position;
     }
@@ -90,7 +90,7 @@ public class PlayerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Right_wall"))
         {
             grounded = true;
-            g_changed = true;
+            //g_changed = true;
             gravity_direction = 2;
             current_horizontal = right_horizontal;
             current_gravity = Vector3.right;
@@ -102,7 +102,7 @@ public class PlayerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Left_wall"))
         {
             grounded = true;
-            g_changed = true;
+            //g_changed = true;
             gravity_direction = 4;
             current_horizontal = left_horizontal;
             current_gravity = Vector3.left;
@@ -114,7 +114,7 @@ public class PlayerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Top_wall"))
         {
             grounded = true;
-            g_changed = true;
+            //g_changed = true;
             gravity_direction = 3;
             current_horizontal = top_horizontal;
             current_gravity = Vector3.up;
@@ -126,7 +126,7 @@ public class PlayerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Bottom_wall"))
         {
             grounded = true;
-            g_changed = true;
+            //g_changed = true;
             gravity_direction = 1;
             current_horizontal = bottom_horizontal;
             current_gravity = Vector3.down;
@@ -142,14 +142,14 @@ public class PlayerControls : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             m_shot = muzzle.GetComponent<RayGun>();
-            m_shot.damageAmount *= 2;
+            m_shot.damage_amount *= 2;
             //print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
         }
 
         if (other.gameObject.CompareTag("ExtraHealth"))
         {
             other.gameObject.SetActive(false);
-            rb.gameObject.GetComponent<PlayerHealth>().currentHealth += 50;
+            rb.gameObject.GetComponent<PlayerHealth>().current_health += 50;
             //print("Player got extra health");
 
         }

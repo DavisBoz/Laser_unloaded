@@ -1,48 +1,47 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WonLevel : MonoBehaviour
 {
-    public float fadeDuration = 1f;
-    public float displayImageDuration = 1f;
+    public float fade_duration = 1f;
+    public float image_duration = 1f;
     public GameObject player;
-    public CanvasGroup WonBackgroundImageCanvasGroup;
-    public AudioSource wonAudio;
+    public CanvasGroup won_background_image_canvas;
+    public AudioSource won_audio;
 
-    bool m_IsPlayerAtExit;
-    float m_Timer;
-    bool m_hasAudioPlayed;
+    bool at_exit;
+    float timer;
+    bool audio_played;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
-            m_IsPlayerAtExit = true;
+            at_exit = true;
         }
     }
 
     void Update()
     {
-        if (m_IsPlayerAtExit)
+        if (at_exit)
         {
-            FailLevel(WonBackgroundImageCanvasGroup, wonAudio);
+            FailLevel(won_background_image_canvas, won_audio);
         }
     }
 
-    void FailLevel(CanvasGroup imageCanvasGroup, AudioSource audioSource)
+    void FailLevel(CanvasGroup image_canvas, AudioSource audio_source)
     {
-        if (!m_hasAudioPlayed)
+        if (!audio_played)
         {
-            audioSource.Play();
-            m_hasAudioPlayed = true;
+            audio_source.Play();
+            audio_played = true;
         }
 
-        m_Timer += Time.deltaTime;
+        timer += Time.deltaTime;
 
-        imageCanvasGroup.alpha = m_Timer / fadeDuration;
+        image_canvas.alpha = timer / fade_duration;
 
-        if (m_Timer > fadeDuration + displayImageDuration)
+        if (timer > fade_duration + image_duration)
         {
             Scene scene  = SceneManager.GetActiveScene();
             if (scene.name == "Tutorial")

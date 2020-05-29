@@ -23,7 +23,7 @@ public class SmoothFollow : MonoBehaviour
     // the height we want the camera to be above the target
     public float height = 5.0f;
     // How much we 
-    public float heightDamping = 2.0f;
+    public float height_damping = 2.0f;
 
     void LateUpdate()
     {
@@ -32,15 +32,15 @@ public class SmoothFollow : MonoBehaviour
             return;
 
         // Calculate the current rotation angles
-        float wantedHeight = target.position.y + height;
-        float currentRotationAngle = transform.eulerAngles.y;
-        float currentHeight = transform.position.y;
+        float wanted_height = target.position.y + height;
+        float current_rotation_angle = transform.eulerAngles.y;
+        float current_height = transform.position.y;
 
         // Damp the height
-        currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
+        current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
 
         // Convert the angle into a rotation
-        Quaternion currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
+        Quaternion current_rotation = Quaternion.Euler(0, current_rotation_angle, 0);
         
         // Set the position of the camera on the x-z plane to:
         // distance meters behind the target
@@ -51,51 +51,51 @@ public class SmoothFollow : MonoBehaviour
         if (target.GetComponent<PlayerControls>().current_gravity == Vector3.down)
         {
             transform.position = target.position;
-            transform.position -= currentRotation * Vector3.forward * distance;
+            transform.position -= current_rotation * Vector3.forward * distance;
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+            transform.position = new Vector3(transform.position.x, current_height, transform.position.z);
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.right)
         {
             transform.rotation = Quaternion.Euler(0, 0, 90);
-            wantedHeight = target.position.x - height;
-            currentHeight = transform.position.x;
+            wanted_height = target.position.x - height;
+            current_height = transform.position.x;
 
             // distance meters behind the target
             transform.position = target.position;
-            transform.position -= currentRotation * Vector3.forward * distance;
+            transform.position -= current_rotation * Vector3.forward * distance;
 
             // Damp the height
-            currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
-            transform.position = new Vector3(currentHeight, transform.position.y, transform.position.z);
+            current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
+            transform.position = new Vector3(current_height, transform.position.y, transform.position.z);
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.up)
         {
             transform.rotation = Quaternion.Euler(0, 0, 180);
-            wantedHeight = target.position.y - height;
-            currentHeight = transform.position.y;
+            wanted_height = target.position.y - height;
+            current_height = transform.position.y;
 
             // distance meters behind the target
             transform.position = target.position;
-            transform.position -= currentRotation * Vector3.forward * distance;
+            transform.position -= current_rotation * Vector3.forward * distance;
 
             // Damp the height
-            currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
-            transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+            current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, current_height, transform.position.z);
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.left)
         {
             transform.rotation = Quaternion.Euler(0, 0, 270);
-            wantedHeight = target.position.x + height;
-            currentHeight = transform.position.x;
+            wanted_height = target.position.x + height;
+            current_height = transform.position.x;
 
             // distance meters behind the target
             transform.position = target.position;
-            transform.position -= currentRotation * Vector3.forward * distance;
+            transform.position -= current_rotation * Vector3.forward * distance;
 
             // Damp the height
-            currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
-            transform.position = new Vector3(currentHeight, transform.position.y, transform.position.z);
+            current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
+            transform.position = new Vector3(current_height, transform.position.y, transform.position.z);
         }
     }
 }
