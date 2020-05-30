@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\BossLevel.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\LevelMenu.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlatformXmorph.cs" />
     <Compile Include="Assets\Scripts\PlatformZmorph.cs" />
