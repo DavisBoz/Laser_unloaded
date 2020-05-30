@@ -14,7 +14,6 @@ public class PlayerControls : MonoBehaviour
     public GameObject muzzle;
     public Vector3 current_gravity = Vector3.down;
     RayGun m_shot;
-    string prev_tag;
     float move_horizontal;
     float move_vertical;
     bool can_jump;
@@ -93,65 +92,49 @@ public class PlayerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Right_wall"))
         {
             grounded = true;
-            if (prev_tag != "Right_wall")
-            {
-                //g_changed = true;
-                gravity_direction = 2;
-                current_horizontal = right_horizontal;
-                current_gravity = Vector3.right;
-                jump_direction = Vector3.left;
-                deceleration = new Vector3(1f, .5f, .5f);
-                head.transform.rotation = Quaternion.Euler(0, -90, 45);
-                prev_tag = "Right_wall";
-            }
+            //g_changed = true;
+            gravity_direction = 2;
+            current_horizontal = right_horizontal;
+            current_gravity = Vector3.right;
+            jump_direction = Vector3.left;
+            deceleration = new Vector3(1f, .5f, .5f);
+            head.transform.rotation = Quaternion.Euler(0, -90, 45);
         }
 
         if (other.gameObject.CompareTag("Left_wall"))
         {
             grounded = true;
-            if (prev_tag != "Left_wall")
-            {
-                //g_changed = true;
-                gravity_direction = 4;
-                current_horizontal = left_horizontal;
-                current_gravity = Vector3.left;
-                jump_direction = Vector3.right;
-                deceleration = new Vector3(1f, .5f, .5f);
-                head.transform.rotation = Quaternion.Euler(0, 90, -135);
-                prev_tag = "Left_wall";
-            }
+            //g_changed = true;
+            gravity_direction = 4;
+            current_horizontal = left_horizontal;
+            current_gravity = Vector3.left;
+            jump_direction = Vector3.right;
+            deceleration = new Vector3(1f, .5f, .5f);
+            head.transform.rotation = Quaternion.Euler(0, 90, -135);
         }
 
         if (other.gameObject.CompareTag("Top_wall"))
         {
             grounded = true;
-            if (prev_tag != "Top_wall")
-            {
-                //g_changed = true;
-                gravity_direction = 3;
-                current_horizontal = top_horizontal;
-                current_gravity = Vector3.up;
-                jump_direction = Vector3.down;
-                deceleration = new Vector3(.5f, 1f, .5f);
-                head.transform.rotation = Quaternion.Euler(90, -135, 0);
-                prev_tag = "Top_wall";
-            }
+            //g_changed = true;
+            gravity_direction = 3;
+            current_horizontal = top_horizontal;
+            current_gravity = Vector3.up;
+            jump_direction = Vector3.down;
+            deceleration = new Vector3(.5f, 1f, .5f);
+            head.transform.rotation = Quaternion.Euler(90, -135, 0);
         }
 
         if (other.gameObject.CompareTag("Bottom_wall"))
         {
             grounded = true;
-            if (prev_tag != "Bottom_wall")
-            {
-                //g_changed = true;
-                gravity_direction = 1;
-                current_horizontal = bottom_horizontal;
-                current_gravity = Vector3.down;
-                jump_direction = Vector3.up;
-                deceleration = new Vector3(.5f, 1f, .5f);
-                head.transform.rotation = Quaternion.Euler(-90, -45, 0);
-                prev_tag = "Bottom_wall";
-            }
+            //g_changed = true;
+            gravity_direction = 1;
+            current_horizontal = bottom_horizontal;
+            current_gravity = Vector3.down;
+            jump_direction = Vector3.up;
+            deceleration = new Vector3(.5f, 1f, .5f);
+            head.transform.rotation = Quaternion.Euler(-90, -45, 0);
         }
     }
 

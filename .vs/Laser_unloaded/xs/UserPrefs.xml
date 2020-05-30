@@ -4,11 +4,11 @@
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="15" Column="37" />
       <File FileName="Assets/Scripts/BossLevel.cs" />
       <File FileName="Assets/Scripts/AchievementControls.cs" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="144" Column="36" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="102" Column="10" />
       <File FileName="Assets/Scripts/SmoothFollow.cs" />
       <File FileName="Assets/Scripts/TextManage.cs" />
       <File FileName="Assets/Scripts/MainMenu.cs" />
-      <File FileName="Assets/Scripts/LevelMenu.cs" Line="1" Column="35" />
+      <File FileName="Assets/Scripts/LevelMenu.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4d945b21-61c4-466b-ab00-4a4fd8d9eb5d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fd629f65-0738-4f86-a990-7e3d86b4964a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
