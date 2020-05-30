@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour
     public float jump_height;
     public static int gravity_direction = 1;
     //public static int previous_direction = 1;
+    public static int count;
     public static bool g_changed = false;
     public GameObject head;
     public GameObject muzzle;
@@ -144,6 +145,7 @@ public class PlayerControls : MonoBehaviour
             other.gameObject.SetActive(false);
             m_shot = muzzle.GetComponent<RayGun>();
             m_shot.damage_amount *= 2;
+            count += 1;
             //print("Doubled damage, from " + m_shot.damageAmount / 2 + " to " + m_shot.damageAmount);
         }
 
@@ -151,6 +153,7 @@ public class PlayerControls : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             rb.gameObject.GetComponent<PlayerHealth>().current_health += 50;
+            count += 1;
             //print("Player got extra health");
 
         }
@@ -159,6 +162,7 @@ public class PlayerControls : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             speed += 30;
+            count += 1;
             //print("Player got more speed");
         }
 
@@ -166,6 +170,7 @@ public class PlayerControls : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             ScoreManager.score *= 2;
+            count += 1;
             //print("Doubled XP, from " + ScoreManager.score / 2 + " to " + ScoreManager.score);
         }
 

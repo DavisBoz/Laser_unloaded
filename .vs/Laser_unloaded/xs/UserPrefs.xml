@@ -3,8 +3,8 @@
     <Files>
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="15" Column="37" />
       <File FileName="Assets/Scripts/BossLevel.cs" />
-      <File FileName="Assets/Scripts/AchievementControls.cs" Line="17" Column="5" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" />
+      <File FileName="Assets/Scripts/AchievementControls.cs" Line="70" Column="24" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="173" Column="24" />
       <File FileName="Assets/Scripts/SmoothFollow.cs" />
       <File FileName="Assets/Scripts/TextManage.cs" />
     </Files>
@@ -24,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="df5b6b14-169b-4dc3-b011-d04d7fa29480" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ad77b6ec-2df9-44dd-a358-927b38b01474" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
