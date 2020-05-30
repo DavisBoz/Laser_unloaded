@@ -66,6 +66,7 @@ public class PlayerControls : MonoBehaviour
         rb.AddForce(current_gravity * 30);
         rb.AddForce(Vector3.forward * speed);
 
+        
     }
 
     void Update()

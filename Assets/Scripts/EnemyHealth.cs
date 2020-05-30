@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour
     public int starting_health = 100;            // The amount of health the enemy starts the game with.
     public int current_health;                   // The current health the enemy has
     public int score_value = 10;                 // The amount added to the player's score when the enemy dies.
+    public static int count;                         // The number of enemies in the scene
     bool is_dead;
     int hit;
 
@@ -20,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         capsule_collider = GetComponent<CapsuleCollider>();
         // Setting the current health when the enemy first spawns.
         current_health = starting_health;
+        count += 1;
     }
 
     public void TakeDamage(int amount)
@@ -49,11 +51,10 @@ public class EnemyHealth : MonoBehaviour
 
     void Death()
     {
+        count -= 1;
         is_dead = true;
-        // Tell the animator that the enemy is dead.
-
         alien_death.Play();
-        anim.SetTrigger("Dead");
+        anim.SetTrigger("Dead");                    // Tell the animator that the enemy is dead.
         capsule_collider.isTrigger = true;
         Destroy(gameObject, 1.5f);
         ScoreManager.score += score_value;

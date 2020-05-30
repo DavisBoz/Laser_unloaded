@@ -1,18 +1,12 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyHealth.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AchievementControls.cs">
     <Files>
-      <File FileName="Assets/Scripts/ResetLevel.cs" Line="8" Column="17" />
-      <File FileName="Assets/Scripts/EnemyHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="15" Column="37" />
+      <File FileName="Assets/Scripts/BossLevel.cs" />
+      <File FileName="Assets/Scripts/AchievementControls.cs" Line="17" Column="5" />
       <File FileName="Assets/Scripts/PlayerControls.cs" />
-      <File FileName="Assets/Scripts/textManage.cs" />
-      <File FileName="Assets/Scripts/MainMenu.cs" />
-      <File FileName="Assets/Scripts/RayGun.cs" />
-      <File FileName="Assets/Scripts/Rotator.cs" />
-      <File FileName="Assets/Scripts/WonLevel.cs" />
       <File FileName="Assets/Scripts/SmoothFollow.cs" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" />
-      <File FileName="Assets/Scripts/EnemyAttack.cs" />
+      <File FileName="Assets/Scripts/TextManage.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +14,7 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="EnemyHealth.cs" selected="True" />
+                <Node name="AchievementControls.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -30,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9c6e166c-8dc9-498d-b3dd-16a64f0c5813" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="df5b6b14-169b-4dc3-b011-d04d7fa29480" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
