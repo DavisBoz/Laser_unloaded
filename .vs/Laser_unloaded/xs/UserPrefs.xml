@@ -11,7 +11,7 @@
       <File FileName="Assets/Scripts/LevelMenu.cs" />
       <File FileName="Assets/Scripts/Rotator.cs" />
       <File FileName="Assets/Scripts/WonLevel.cs" />
-      <File FileName="Assets/Scripts/RayGun.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/RayGun.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f96ea3f9-2c60-46f2-903b-a6e35fc6f64a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ccc48107-e770-464a-b8b8-84ed0f9257ad" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
