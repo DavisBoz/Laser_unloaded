@@ -440,6 +440,33 @@ MonoBehaviour:
   current_health: 0
   score_value: 10
   alien_death: {fileID: 1307386344}
+--- !u!136 &92998324
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92998322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.009033997
+  m_Height: 0.03561123
+  m_Direction: 2
+  m_Center: {x: -5.463545e-17, y: 0.0078788735, z: -0.0054126168}
+--- !u!135 &92998325
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92998322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.016
+  m_Center: {x: 0, y: 0.01, z: 0.01}
 --- !u!114 &92998327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,7 +786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154340558}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.45, y: 5.5, z: -46}
+  m_LocalPosition: {x: 15, y: 7.5, z: -46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1752920801}
@@ -879,6 +906,33 @@ MonoBehaviour:
   current_health: 0
   score_value: 10
   alien_death: {fileID: 1307386344}
+--- !u!136 &184552213
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184552211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.009033997
+  m_Height: 0.03561123
+  m_Direction: 2
+  m_Center: {x: -5.463545e-17, y: 0.0078788735, z: -0.0054126168}
+--- !u!135 &184552214
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184552211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.016
+  m_Center: {x: 0, y: 0.01, z: 0.01}
 --- !u!114 &184552216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,9 +2008,26 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5339942297001705387, guid: a283c390cdc07a243a05c023980e5629, type: 3}
     - {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a283c390cdc07a243a05c023980e5629, type: 3}
 --- !u!4 &330028528 stripped
 Transform:
@@ -2788,7 +2859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547010237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1900015, y: -2, z: -45.18}
+  m_LocalPosition: {x: 5.1900015, y: -1.5, z: -45.18}
   m_LocalScale: {x: 1, y: 1, z: 2.3125}
   m_Children: []
   m_Father: {fileID: 1752920801}
@@ -2816,6 +2887,33 @@ MonoBehaviour:
   current_health: 0
   score_value: 10
   alien_death: {fileID: 1307386344}
+--- !u!136 &554019667
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554019665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.009033997
+  m_Height: 0.03561123
+  m_Direction: 2
+  m_Center: {x: -5.463545e-17, y: 0.0078788735, z: -0.0054126168}
+--- !u!135 &554019668
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554019665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.016
+  m_Center: {x: 0, y: 0.01, z: 0.01}
 --- !u!114 &554019670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2859,7 +2957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559340359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1900015, y: 18.5, z: -46}
+  m_LocalPosition: {x: 5.1900015, y: 16, z: -46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1752920801}
@@ -3095,45 +3193,6 @@ Transform:
   m_Father: {fileID: 1847778517}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
---- !u!1 &652335621 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 581477600377345615, guid: a283c390cdc07a243a05c023980e5629,
-    type: 3}
-  m_PrefabInstance: {fileID: 7195419883641661127}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &652335622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652335621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starting_health: 100
-  current_health: 0
-  score_value: 10
-  alien_death: {fileID: 1307386344}
---- !u!114 &652335626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652335621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack_interval: 0.5
-  attack_damage: 10
-  Smack: {fileID: 1158485177}
-  Growl: {fileID: 729286696}
-  player: {fileID: 721056896904141724}
 --- !u!1 &673304011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4630,9 +4689,26 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5339942297001705387, guid: a283c390cdc07a243a05c023980e5629, type: 3}
     - {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a283c390cdc07a243a05c023980e5629, type: 3}
 --- !u!1 &901955227
 GameObject:
@@ -4748,6 +4824,33 @@ MonoBehaviour:
   current_health: 0
   score_value: 10
   alien_death: {fileID: 1307386344}
+--- !u!136 &918466706
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918466704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.009033997
+  m_Height: 0.03561123
+  m_Direction: 2
+  m_Center: {x: -5.463545e-17, y: 0.0078788735, z: -0.0054126168}
+--- !u!135 &918466707
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918466704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.016
+  m_Center: {x: 0, y: 0.01, z: 0.01}
 --- !u!114 &918466709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5291,9 +5394,26 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5339942297001705387, guid: a283c390cdc07a243a05c023980e5629, type: 3}
     - {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a283c390cdc07a243a05c023980e5629, type: 3}
 --- !u!1 &1158485175
 GameObject:
@@ -5782,7 +5902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269463401}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -3.63, y: 9.2, z: -46}
+  m_LocalPosition: {x: -2, y: 7.5, z: -46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1752920801}
@@ -5936,6 +6056,33 @@ MonoBehaviour:
   current_health: 0
   score_value: 10
   alien_death: {fileID: 1307386344}
+--- !u!136 &1302626485
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302626483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.009033997
+  m_Height: 0.03561123
+  m_Direction: 2
+  m_Center: {x: -5.463545e-17, y: 0.0078788735, z: -0.0054126168}
+--- !u!135 &1302626486
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302626483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.016
+  m_Center: {x: 0, y: 0.01, z: 0.01}
 --- !u!114 &1302626488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13176,9 +13323,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3253616329168716329, guid: 84d848322802e458fa2a34715af329cf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258457682316800276, guid: 84d848322802e458fa2a34715af329cf,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258457682316800276, guid: 84d848322802e458fa2a34715af329cf,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3008419363122197746, guid: 84d848322802e458fa2a34715af329cf, type: 3}
     - {fileID: 9163690659951395531, guid: 84d848322802e458fa2a34715af329cf, type: 3}
+    - {fileID: 2258457682316800276, guid: 84d848322802e458fa2a34715af329cf, type: 3}
+    - {fileID: 3253616329168716329, guid: 84d848322802e458fa2a34715af329cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 84d848322802e458fa2a34715af329cf, type: 3}
 --- !u!1 &1733487406
 GameObject:
@@ -15061,9 +15225,41 @@ PrefabInstance:
       propertyPath: alienDeath
       value: 
       objectReference: {fileID: 1307386344}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.040000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 3.1086215e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.0029999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5339942297001705387, guid: a283c390cdc07a243a05c023980e5629, type: 3}
     - {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 8974797787135621709, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+    - {fileID: 5691545605522033008, guid: a283c390cdc07a243a05c023980e5629, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a283c390cdc07a243a05c023980e5629, type: 3}
 --- !u!1 &2090035932
 GameObject:
@@ -15938,11 +16134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alien2
       objectReference: {fileID: 0}
-    - target: {fileID: 581477600377345615, guid: a283c390cdc07a243a05c023980e5629,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 581477600376994415, guid: a283c390cdc07a243a05c023980e5629,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15998,24 +16189,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629,
-        type: 3}
+    - target: {fileID: 652335622, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+      propertyPath: alien_death
+      value: 
+      objectReference: {fileID: 1307386344}
+    - target: {fileID: 652335626, guid: a283c390cdc07a243a05c023980e5629, type: 3}
       propertyPath: Smack
       value: 
       objectReference: {fileID: 1158485177}
-    - target: {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629,
-        type: 3}
+    - target: {fileID: 652335626, guid: a283c390cdc07a243a05c023980e5629, type: 3}
       propertyPath: Growl
       value: 
       objectReference: {fileID: 729286696}
-    - target: {fileID: 5339942297001705387, guid: a283c390cdc07a243a05c023980e5629,
-        type: 3}
-      propertyPath: alienDeath
+    - target: {fileID: 652335626, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 1307386344}
-    m_RemovedComponents:
-    - {fileID: 5339942297001705387, guid: a283c390cdc07a243a05c023980e5629, type: 3}
-    - {fileID: 2085373714662640018, guid: a283c390cdc07a243a05c023980e5629, type: 3}
+      objectReference: {fileID: 721056896904141724}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a283c390cdc07a243a05c023980e5629, type: 3}
 --- !u!4 &7767186023203691688 stripped
 Transform:

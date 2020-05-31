@@ -17241,9 +17241,9 @@ GameObject:
   - component: {fileID: 581477600376994415}
   - component: {fileID: 581477600384774087}
   - component: {fileID: 5691545605522033008}
-  - component: {fileID: 2085373714662640018}
-  - component: {fileID: 5339942297001705387}
   - component: {fileID: 8974797787135621709}
+  - component: {fileID: 652335622}
+  - component: {fileID: 652335626}
   m_Layer: 8
   m_Name: Alien2
   m_TagString: Enemy
@@ -17299,43 +17299,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.02
-  m_Height: 0.03
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.01, z: -0.003}
---- !u!114 &2085373714662640018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581477600377345615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
-  Smack: {fileID: 0}
-  Growl: {fileID: 0}
---- !u!114 &5339942297001705387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581477600377345615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 50
-  currentHealth: 0
-  sinkSpeed: 2.5
-  scoreValue: 5
-  alienDeath: {fileID: 0}
+  m_Radius: 0.009033997
+  m_Height: 0.03561123
+  m_Direction: 2
+  m_Center: {x: -5.463545e-17, y: 0.0078788735, z: -0.0054126168}
 --- !u!135 &8974797787135621709
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17347,8 +17314,41 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.025
-  m_Center: {x: 0, y: 0.01, z: -0.002}
+  m_Radius: 0.016
+  m_Center: {x: 0, y: 0.01, z: 0.01}
+--- !u!114 &652335622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581477600377345615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d05e55dbb9e842f7872228bc7ff808a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starting_health: 100
+  current_health: 0
+  score_value: 10
+  alien_death: {fileID: 0}
+--- !u!114 &652335626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581477600377345615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599e64781a06c44958578048928ee588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack_interval: 0.5
+  attack_damage: 10
+  Smack: {fileID: 0}
+  Growl: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &581477600377345617
 GameObject:
   m_ObjectHideFlags: 0
