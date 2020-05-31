@@ -13756,7 +13756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e9d6caa33c442a8881eddecb70b993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup_ct: 1
+  pickup_ct: 5
   ach_box: {fileID: 916116227}
 --- !u!114 &1014835328
 MonoBehaviour:

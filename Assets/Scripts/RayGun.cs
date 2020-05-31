@@ -23,7 +23,7 @@ public class RayGun : MonoBehaviour
         void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             if (Time.time > shoot_rate_time)
             {

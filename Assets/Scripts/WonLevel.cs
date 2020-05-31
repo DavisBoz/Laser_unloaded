@@ -53,6 +53,10 @@ public class WonLevel : MonoBehaviour
             {
                 SceneManager.LoadScene("Lvl 2");
             }
+            else if (scene.name == "Lvl 2")
+            {
+                SceneManager.LoadScene("Lvl 3");
+            }
             else
                 Application.Quit();
         }

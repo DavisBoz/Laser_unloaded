@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Rotator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TextManage.cs">
     <Files>
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="15" Column="37" />
       <File FileName="Assets/Scripts/BossLevel.cs" />
       <File FileName="Assets/Scripts/AchievementControls.cs" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="102" Column="10" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" />
       <File FileName="Assets/Scripts/SmoothFollow.cs" />
-      <File FileName="Assets/Scripts/TextManage.cs" />
+      <File FileName="Assets/Scripts/TextManage.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MainMenu.cs" />
       <File FileName="Assets/Scripts/LevelMenu.cs" />
-      <File FileName="Assets/Scripts/Rotator.cs" Line="10" Column="73" />
+      <File FileName="Assets/Scripts/Rotator.cs" />
+      <File FileName="Assets/Scripts/WonLevel.cs" />
+      <File FileName="Assets/Scripts/RayGun.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +19,7 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Rotator.cs" selected="True" />
+                <Node name="TextManage.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -27,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="683ddcc3-18fa-45e8-acea-92499eedb208" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f96ea3f9-2c60-46f2-903b-a6e35fc6f64a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
