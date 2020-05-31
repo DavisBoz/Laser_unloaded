@@ -816,8 +816,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.379858, y: 1, z: 400}
-  m_Center: {x: 1.4348402, y: 6.1794543e-15, z: 150}
+  m_Size: {x: 19.379858, y: 1, z: 375.45108}
+  m_Center: {x: 1.4348402, y: 6.1794543e-15, z: 137.72554}
 --- !u!1 &157815551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,8 +2865,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.379858, y: 1, z: 150}
-  m_Center: {x: 1.4348402, y: 0, z: 66}
+  m_Size: {x: 19.379858, y: 1, z: 145.97188}
+  m_Center: {x: 1.4348402, y: 0, z: 63.98594}
 --- !u!4 &547010240
 Transform:
   m_ObjectHideFlags: 0
@@ -3003,8 +3003,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.379858, y: 1, z: 400}
-  m_Center: {x: 1.4348402, y: 0, z: 150}
+  m_Size: {x: 19.379858, y: 1, z: 372.97403}
+  m_Center: {x: 1.4348402, y: 0, z: 136.48701}
 --- !u!1 &582264529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5274,7 +5274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129567693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 325, y: 0, z: -0}
+  m_LocalPosition: {x: 320, y: 0, z: -0}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485790194}
@@ -5980,8 +5980,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.379858, y: 1, z: 400}
-  m_Center: {x: 1.4348402, y: -6.1794543e-15, z: 150}
+  m_Size: {x: 19.379858, y: 1, z: 374.25067}
+  m_Center: {x: 1.4348402, y: -6.1794543e-15, z: 137.12534}
 --- !u!1 &1287471589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8055,7 +8055,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'High-Score: 200 Player: VADER'
+  m_text: 'High-Score: 140 Player: VADER'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

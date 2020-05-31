@@ -1378,7 +1378,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'High-Score: 160 Player: SKYWK'
+  m_text: 'High-Score: 170 Player: SKYWK'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1746,8 +1746,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.427948, y: 1, z: 250}
-  m_Center: {x: 0.28981256, y: 0, z: 65.85501}
+  m_Size: {x: 20.427948, y: 1, z: 209.461}
+  m_Center: {x: 0.2898121, y: 0, z: 86.12451}
 --- !u!1 &619200853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,8 +3467,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.62019, y: 1, z: 250}
-  m_Center: {x: 0.19515038, y: 0, z: 65.85501}
+  m_Size: {x: 20.62019, y: 1, z: 204.02446}
+  m_Center: {x: 0.19515038, y: 0, z: 88.84278}
 --- !u!4 &1328015229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5051389425419309938, guid: 7328c79242c7847b7bb49b25b447edf9,
@@ -4016,8 +4016,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.379858, y: 1, z: 250}
-  m_Center: {x: 1.4348402, y: -6.1794543e-15, z: 67.786}
+  m_Size: {x: 19.379858, y: 1, z: 206.69333}
+  m_Center: {x: 1.4348402, y: -6.1794543e-15, z: 89.43935}
 --- !u!1 &1511705816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,8 +6110,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 17.313215, y: 1, z: 250}
-  m_Center: {x: -1.9304285, y: 9.886636e-16, z: 67.786}
+  m_Size: {x: 17.313215, y: 1, z: 207.17003}
+  m_Center: {x: -1.9304285, y: 9.886636e-16, z: 87.80346}
 --- !u!1 &2103145343
 GameObject:
   m_ObjectHideFlags: 0
