@@ -698,7 +698,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -754,13 +754,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235979675}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalRotation: {x: 0.32374436, y: -0.5825634, z: 0.27165374, w: 0.6942721}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -80, z: 0}
 --- !u!1 &238059833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,21 +3734,6 @@ PrefabInstance:
       propertyPath: laser_sound
       value: 
       objectReference: {fileID: 2060018982}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: BB8Jump
@@ -3763,6 +3748,21 @@ PrefabInstance:
         type: 3}
       propertyPath: jump_height
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262043435368345322, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8069695503384583554, guid: 7328c79242c7847b7bb49b25b447edf9, type: 3}

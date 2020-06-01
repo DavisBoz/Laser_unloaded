@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AchievementControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerControls.cs">
     <Files>
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="15" Column="37" />
       <File FileName="Assets/Scripts/BossLevel.cs" />
       <File FileName="Assets/Scripts/AchievementControls.cs" Line="54" Column="36" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" />
+      <File FileName="Assets/Scripts/PlayerControls.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SmoothFollow.cs" />
       <File FileName="Assets/Scripts/TextManage.cs" />
       <File FileName="Assets/Scripts/MainMenu.cs" />
@@ -19,7 +19,7 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="AchievementControls.cs" selected="True" />
+                <Node name="PlayerControls.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -29,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1dfc819c-c3d6-4ec2-9ead-7dedc9e606a9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7865c927-b1ac-4385-b16e-94b1c13ec1ad" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
