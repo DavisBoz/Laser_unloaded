@@ -34,8 +34,8 @@ public class EnemyAttack : MonoBehaviour
         if (other.gameObject == player)
         {
             // ... the player is in range.
-            player_in_range = true;
             Growl.Play();
+            player_in_range = true;
         }
     }
 
