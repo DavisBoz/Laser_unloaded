@@ -28390,17 +28390,17 @@ PrefabInstance:
       propertyPath: m_shot_prefab
       value: 
       objectReference: {fileID: 136330, guid: 9a0c3383523899643a8d0661cfaca4e4, type: 3}
+    - target: {fileID: 8069695503384583554, guid: 7328c79242c7847b7bb49b25b447edf9,
+        type: 3}
+      propertyPath: jump_height
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: BB8Jump
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 721056896904141726, guid: 7328c79242c7847b7bb49b25b447edf9,
-        type: 3}
-      propertyPath: jump_height
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069695503384583554, guid: 7328c79242c7847b7bb49b25b447edf9,
         type: 3}
       propertyPath: jump_height
       value: 15

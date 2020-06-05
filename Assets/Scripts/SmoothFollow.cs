@@ -24,6 +24,7 @@ public class SmoothFollow : MonoBehaviour
     public float height = 5.0f;
     // How much we 
     public float height_damping = 2.0f;
+    private float speed = 10f;
 
     void LateUpdate()
     {
@@ -52,12 +53,12 @@ public class SmoothFollow : MonoBehaviour
         {
             transform.position = target.position;
             transform.position -= current_rotation * Vector3.forward * distance;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
             transform.position = new Vector3(transform.position.x, current_height, transform.position.z);
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.right)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 90);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 90), Time.deltaTime * speed);
             wanted_height = target.position.x - height;
             current_height = transform.position.x;
 
@@ -71,7 +72,7 @@ public class SmoothFollow : MonoBehaviour
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.up)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 180);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 180), Time.deltaTime * speed);
             wanted_height = target.position.y - height;
             current_height = transform.position.y;
 
@@ -85,7 +86,7 @@ public class SmoothFollow : MonoBehaviour
         }
         else if (target.GetComponent<PlayerControls>().current_gravity == Vector3.left)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 270);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 270), Time.deltaTime * speed);
             wanted_height = target.position.x + height;
             current_height = transform.position.x;
 

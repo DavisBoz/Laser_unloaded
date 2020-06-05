@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WonLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SmoothFollow.cs">
     <Files>
       <File FileName="Assets/Scripts/EnemyAttack.cs" Line="37" Column="26" />
-      <File FileName="Assets/Scripts/BossLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AchievementControls.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LevelMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlatformXmorph.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlatformZmorph.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BossLevel.cs" />
+      <File FileName="Assets/Scripts/AchievementControls.cs" />
+      <File FileName="Assets/Scripts/EnemyHealth.cs" />
+      <File FileName="Assets/Scripts/LevelMenu.cs" />
+      <File FileName="Assets/Scripts/MainMenu.cs" />
+      <File FileName="Assets/Scripts/PlatformXmorph.cs" />
+      <File FileName="Assets/Scripts/PlatformZmorph.cs" />
       <File FileName="Assets/Scripts/PlayerControls.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RayGun.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ResetLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Rotator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" />
+      <File FileName="Assets/Scripts/RayGun.cs" />
+      <File FileName="Assets/Scripts/ResetLevel.cs" />
+      <File FileName="Assets/Scripts/Rotator.cs" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" />
       <File FileName="Assets/Scripts/SmoothFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TextManage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TextManage.cs" />
       <File FileName="Assets/Scripts/WonLevel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -25,7 +25,7 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="WonLevel.cs" selected="True" />
+                <Node name="SmoothFollow.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -35,7 +35,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="904a2b6d-be61-4803-9854-2e7894adf78a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7e2b549-bcde-4808-a0f4-654c68d7e057" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
