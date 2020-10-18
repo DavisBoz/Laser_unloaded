@@ -33,7 +33,8 @@ public class ShotBehavior : MonoBehaviour
 
     void explode()
     {
-        if (collisionExplosion  != null) {
+        if (collisionExplosion != null)
+        {
             GameObject explosion = (GameObject)Instantiate(
                 collisionExplosion, transform.position, transform.rotation);
             Destroy(gameObject);

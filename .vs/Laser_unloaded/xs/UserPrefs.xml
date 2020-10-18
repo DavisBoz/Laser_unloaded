@@ -1,23 +1,9 @@
 ﻿<Properties StartupConfiguration="{CB240D4D-67D5-A434-1010-A3C23A361A79}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SmoothFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Photon/Player/PlayerControllerOnline.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyAttack.cs" Line="37" Column="26" />
-      <File FileName="Assets/Scripts/BossLevel.cs" />
-      <File FileName="Assets/Scripts/AchievementControls.cs" />
-      <File FileName="Assets/Scripts/EnemyHealth.cs" />
-      <File FileName="Assets/Scripts/LevelMenu.cs" />
-      <File FileName="Assets/Scripts/MainMenu.cs" />
-      <File FileName="Assets/Scripts/PlatformXmorph.cs" />
-      <File FileName="Assets/Scripts/PlatformZmorph.cs" />
-      <File FileName="Assets/Scripts/PlayerControls.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" />
-      <File FileName="Assets/Scripts/RayGun.cs" />
-      <File FileName="Assets/Scripts/ResetLevel.cs" />
-      <File FileName="Assets/Scripts/Rotator.cs" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" />
-      <File FileName="Assets/Scripts/SmoothFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TextManage.cs" />
-      <File FileName="Assets/Scripts/WonLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Photon/Player/MultiplayerHealth.cs" Line="42" Column="10" />
+      <File FileName="Assets/Scripts/Photon/PhotonLobbyArena.cs" />
+      <File FileName="Assets/Scripts/Photon/Player/PlayerControllerOnline.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +11,21 @@
           <Node name="Laser_unloaded" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="SmoothFollow.cs" selected="True" />
+                <Node name="Joystick" expanded="True" />
+                <Node name="Photon" expanded="True">
+                  <Node name="GameModes" expanded="True">
+                    <Node name="Arena" expanded="True" />
+                  </Node>
+                  <Node name="Player" expanded="True">
+                    <Node name="PlayerControllerOnline.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="SinglePlayer" expanded="True" />
+              </Node>
+              <Node name="UI" expanded="True">
+                <Node name="VolumetricLines" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -35,7 +35,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7e2b549-bcde-4808-a0f4-654c68d7e057" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3a329b2d-b66b-419a-a753-0366c7127679" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
