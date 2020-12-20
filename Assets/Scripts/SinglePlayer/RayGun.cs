@@ -24,28 +24,26 @@ public class RayGun : MonoBehaviourPun
 
     void Update()
     {
-        if (photonView.IsMine)
+        foreach (Touch touch in Input.touches)
         {
-            foreach (Touch touch in Input.touches)
+            if (touch.phase == TouchPhase.Began)
             {
-                if (touch.phase == TouchPhase.Began)
-                {
-                    finger_up_position = touch.position;
-                    finger_down_position = touch.position;
-                }
+                finger_up_position = touch.position;
+                finger_down_position = touch.position;
+            }
 
-                if (touch.phase == TouchPhase.Ended)
+            if (touch.phase == TouchPhase.Ended)
+            {
+                finger_down_position = touch.position;
+                if ((finger_up_position == finger_down_position) && (Time.time > shoot_rate_time))
                 {
-                    finger_down_position = touch.position;
-                    if ((finger_up_position == finger_down_position) && (Time.time > shoot_rate_time))
-                    {
-                        laser_sound.Play();
-                        shootRay();
-                        shoot_rate_time = Time.time + shoot_rate;
-                    }
+                    laser_sound.Play();
+                    shootRay();
+                    shoot_rate_time = Time.time + shoot_rate;
                 }
             }
         }
+        
     }
 
     void shootRay()

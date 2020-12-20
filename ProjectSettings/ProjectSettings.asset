@@ -653,10 +653,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 8f4588b4-bd58-463a-bd0a-25de536364aa
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Space Jump
+  organizationId: dboz99
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

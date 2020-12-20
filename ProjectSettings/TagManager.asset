@@ -16,8 +16,10 @@ TagManager:
   - Joystick
   - Bullet
   - Explosion
-  - Muzzle
-  - LocalMuzzle
+  - Reset
+  - Environment
+  - Head
+  - LobbyCam
   layers:
   - Default
   - TransparentFX
@@ -33,11 +35,11 @@ TagManager:
   - Player
   - Bullet
   - Explosion
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bottom_wall
+  - Top_wall
+  - Left_wall
+  - Right_wall
+  - Character
   - 
   - 
   - 

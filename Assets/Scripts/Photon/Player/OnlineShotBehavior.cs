@@ -3,7 +3,7 @@
 public class OnlineShotBehavior : MonoBehaviour
 {
     public Vector3 m_target;
-    public GameObject collisionExplosion;
+    public string collision_explosion;
     public float speed;
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class OnlineShotBehavior : MonoBehaviour
             {
                 if (transform.position == m_target)
                 {
-                    GameObject.FindGameObjectWithTag("LocalMuzzle").GetComponent<MultiplayerRaygun>().explode(transform.position, transform.rotation);
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().explode(collision_explosion, transform.position, transform.rotation);
                     Destroy(gameObject);
                     return;
                 }
@@ -29,5 +29,7 @@ public class OnlineShotBehavior : MonoBehaviour
     {
         m_target = target;
     }
+
+
 
 }

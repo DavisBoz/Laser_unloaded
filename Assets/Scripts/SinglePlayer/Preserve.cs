@@ -18,6 +18,9 @@ public static class Preserve
     public static int deaths2;
     public static int deaths3;
     public static int kills;
+    public static int multiplayer_kills;
+    public static int multiplayer_deaths;
+    public static int multiplayer_xp;
 }
 
 

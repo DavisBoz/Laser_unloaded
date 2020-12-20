@@ -5,17 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LoginMenu.unity
     guid: 9f6bd53166baf478486ce1c725e0f958
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: ad27e1f52a9cd48bf8c42f6ed255d6cd
   - enabled: 1
-    path: Assets/Scenes/ArenaMode.unity
+    path: Assets/Scenes/Zenith Base.unity
     guid: 3bcabba5333284b929fdd1a30862bbd7
-  - enabled: 0
-    path: Assets/Scenes/RaceMode.unity
+  - enabled: 1
+    path: Assets/Scenes/Circuit 11.unity
     guid: cc799119daf7a4c2d98792fc16387916
   - enabled: 0
     path: Assets/Scenes/Tutorial.unity

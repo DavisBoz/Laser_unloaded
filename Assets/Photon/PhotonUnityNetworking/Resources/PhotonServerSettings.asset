@@ -44,6 +44,15 @@ MonoBehaviour:
   - Explode
   - takeDamage
   - TakeDamage
+  - SyncProfile
+  - fallDamage
+  - Disable
+  - Equip
+  - PickupWeapon
+  - SyncTeam
+  - shootBRay
+  - Die
+  - SelfDestruct
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

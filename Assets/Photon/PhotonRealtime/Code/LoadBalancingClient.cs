@@ -3714,6 +3714,7 @@ namespace Photon.Realtime
         /// will be essential to read the incoming events.
         /// </remarks>
         void OnEvent(EventData photonEvent);
+        void OnLeftRoom();
     }
 
     /// <summary>

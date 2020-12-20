@@ -12,9 +12,8 @@ public class PlayFabController : MonoBehaviour
     public static bool IsLoggedIn = false;
     private string user_email;
     private string user_password;
-    private string username;
+    public string username;
 
-    public Button login_button;
     public Button iOS_login_button;
 
     private void OnEnable()
@@ -36,74 +35,22 @@ public class PlayFabController : MonoBehaviour
     public void Start()
     {
         //PlayerPrefs.DeleteAll();
-        //Note: Setting title Id here can be skipped if you have set the value in Editor Extensions already.
-        if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
-        {
-            PlayFabSettings.TitleId = "E5D52"; // Please change this value to your own titleId from PlayFab Game Manager
-        }
 
-        if (PlayerPrefs.HasKey("IOS"))
+        if (PlayerPrefs.HasKey("USERNAME"))
         {
-            username = PlayerPrefs.GetString("IOSUSERNAME");
+            username = PlayerPrefs.GetString("USERNAME");
             var requestiOS = new LoginWithIOSDeviceIDRequest { DeviceId = ReturnMobileID(), CreateAccount = false };
             PlayFabClientAPI.LoginWithIOSDeviceID(requestiOS, OnLoginiOSSuccess, OnLoginiOSFailure);
 
         }
-
-        else if (PlayerPrefs.HasKey("EMAIL"))
-        {
-            user_email = PlayerPrefs.GetString("EMAIL");
-            user_password = PlayerPrefs.GetString("PASSWORD");
-            var request = new LoginWithEmailAddressRequest { Email = user_email, Password = user_password };
-            PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
-        }
     }
 
     #region Login
-    private void OnLoginSuccess(LoginResult result)
-    {
-        Debug.Log("Congratulations, you made your first successful API call!");
-        PlayerPrefs.SetString("EMAIL", user_email);
-        PlayerPrefs.SetString("PASSWORD", user_password);
-        PlayerPrefs.SetString("USERNAME", username);
-        IsLoggedIn = true;
-        PlayFabController.PFC.GetStats();
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void OnRegisterSuccess(RegisterPlayFabUserResult result)
-    {
-        Debug.Log("Congratulations, you made your first successful API call!");
-        PlayerPrefs.SetString("EMAIL", user_email);
-        PlayerPrefs.SetString("PASSWORD", user_password);
-        PlayerPrefs.SetString("USERNAME", username);
-        IsLoggedIn = true;
-        var request_name = new UpdateUserTitleDisplayNameRequest { DisplayName = username };
-        PlayFabClientAPI.UpdateUserTitleDisplayName(request_name, resultCallback =>
-        {
-            SceneManager.LoadScene("MainMenu");
-        }, errorCallback =>
-        {
-            Debug.Log(errorCallback.GenerateErrorReport());
-        });
-    }
-
-    private void OnLoginFailure(PlayFabError error)
-    {
-        var register_request = new RegisterPlayFabUserRequest { Email = user_email, Password = user_password, Username = username };
-        PlayFabClientAPI.RegisterPlayFabUser(register_request, OnRegisterSuccess, OnRegisterFailure);
-    }
-
-    private void OnRegisterFailure(PlayFabError error)
-    {
-        Debug.LogError(error.GenerateErrorReport());
-    }
-
+    
     private void OnLoginiOSSuccess(LoginResult result)
     {
         Debug.Log("Congratulations, you made your first successful API call!");
-        PlayerPrefs.SetString("IOSUSERNAME", username);
-        PlayerPrefs.SetString("IOS", "yes");
+        PlayerPrefs.SetString("USERNAME", username);
         IsLoggedIn = true;
         PlayFabController.PFC.GetStats();
         var request_name = new UpdateUserTitleDisplayNameRequest { DisplayName = username };
@@ -136,12 +83,7 @@ public class PlayFabController : MonoBehaviour
         username = username_in;
     }
 
-    public void OnClickLogin()
-    {
-        var request = new LoginWithEmailAddressRequest { Email = user_email, Password = user_password };
-        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
-    }
-
+    
     public void OnClickLoginiOS()
     {
         var requestiOS = new LoginWithIOSDeviceIDRequest { DeviceId = ReturnMobileID(), CreateAccount = true };
@@ -157,7 +99,7 @@ public class PlayFabController : MonoBehaviour
 
 
 
-
+    //Singleplayer
     public int player_highscore1;
     public int best_time1;
     public int kill1;
@@ -178,6 +120,17 @@ public class PlayFabController : MonoBehaviour
     public static string highscore1;
     public static string highscore2;
     public static string highscore3;
+
+    //Online
+    public int mult_kills;
+    public int mult_deaths;
+    public int kd;
+    public int x_p;
+
+    public int o_kills;
+    public int o_deaths;
+    public int killdeath;
+    public int exp;
 
     #region PlayerStats
 
@@ -201,16 +154,40 @@ public class PlayFabController : MonoBehaviour
                 highscore1 = eachStat.Value.ToString();
             }
 
-            if (eachStat.StatisticName == "highscore2")
+            else if (eachStat.StatisticName == "highscore2")
             {
                 Debug.Log(eachStat.StatisticName + ":" + eachStat.Value);
                 highscore2 = eachStat.Value.ToString();
             }
 
-            if (eachStat.StatisticName == "highscore3")
+            else if (eachStat.StatisticName == "highscore3")
             {
                 Debug.Log(eachStat.StatisticName + ":" + eachStat.Value);
                 highscore3 = eachStat.Value.ToString();
+            }
+
+            else if (eachStat.StatisticName == "online_kills")
+            {
+                Debug.Log(eachStat.StatisticName + ":" + eachStat.Value);
+                o_kills = eachStat.Value;
+            }
+
+            else if (eachStat.StatisticName == "online_deaths")
+            {
+                Debug.Log(eachStat.StatisticName + ":" + eachStat.Value);
+                o_deaths = eachStat.Value;
+            }
+
+            else if (eachStat.StatisticName == "xp")
+            {
+                Debug.Log(eachStat.StatisticName + ":" + eachStat.Value);
+                exp = eachStat.Value;
+            }
+
+            else if (eachStat.StatisticName == "kdr")
+            {
+                Debug.Log(eachStat.StatisticName + ":" + eachStat.Value);
+                killdeath = eachStat.Value;
             }
         }
 
@@ -221,6 +198,7 @@ public class PlayFabController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Lvl1")
         {
+            //singleplayer
             player_highscore1 = Preserve.player_highscore1;
             best_time1 = Preserve.time1;
             best_time2 = -10000;
@@ -231,15 +209,21 @@ public class PlayFabController : MonoBehaviour
             death3 = -100;
             total_deaths = -1000;
             kill1 = Preserve.kills1;
+            //online
+            mult_deaths = 0;
+            mult_kills = 0;
+            kd = 0;
+            x_p = 0;
             PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
             {
                 FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
-                FunctionParameter = new { time1 = best_time1, highscore1 = player_highscore1, kills1 = kill1, deaths1 = death1, time2 = best_time2, deaths2 = death2, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time }, // The parameter provided to your function
+                FunctionParameter = new { time1 = best_time1, highscore1 = player_highscore1, kills1 = kill1, deaths1 = death1, time2 = best_time2, deaths2 = death2, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time, online_kills = mult_kills, online_deaths = mult_deaths,  kdr = kd, xp = x_p}, // The parameter provided to your function
                                                                                                                                   //GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
             }, OnCloudUpdateStat, OnErrorShared);
         }
-        if (scene.name == "Lvl2")
+        else if (scene.name == "Lvl2")
         {
+            //singleplayer
             player_highscore2 = Preserve.player_highscore2;
             best_time2 = Preserve.time2;
             best_time1 = -10000;
@@ -250,16 +234,22 @@ public class PlayFabController : MonoBehaviour
             death3 = -100;
             total_deaths = -1000;
             kill2 = Preserve.kills2;
+            //online
+            mult_deaths = 0;
+            mult_kills = 0;
+            kd = 0;
+            x_p = 0;
             PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
             {
                 FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
-                FunctionParameter = new { time2 = best_time2, highscore2 = player_highscore2, kills2 = kill2, deaths2 = death2, time1 = best_time1, deaths1 = death1, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time }, // The parameter provided to your function
+                FunctionParameter = new { time1 = best_time1, highscore1 = player_highscore1, kills1 = kill1, deaths1 = death1, time2 = best_time2, deaths2 = death2, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time, online_kills = mult_kills, online_deaths = mult_deaths, kdr = kd, xp = x_p }, // The parameter provided to your function
                                                                                                                                   //GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
             }, OnCloudUpdateStat, OnErrorShared);
         }
 
-        if (scene.name == "Lvl3")
+        else if (scene.name == "Lvl3")
         {
+            //singleplayer
             player_highscore3 = Preserve.player_highscore3;
             best_time3 = Preserve.time3;
             best_time1 = -10000;
@@ -272,11 +262,81 @@ public class PlayFabController : MonoBehaviour
             total_score = Preserve.total_score;
             total_deaths = Preserve.total_deaths;
             total_time = Preserve.time1 + Preserve.time2 + Preserve.time3;
+            //online
+            mult_deaths = 0;
+            mult_kills = 0;
+            kd = 0;
+            x_p = 0;
             PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
             {
                 FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
-                FunctionParameter = new { time3 = best_time3, highscore3 = player_highscore3, kills3 = kill3, deaths3 = death3, time1 = best_time1, deaths1 = death1, time2 = best_time2, deaths2 = death2, tot_kills = total_kills, tot_score = total_score, deaths = total_deaths, tot_time = total_time }, // The parameter provided to your function
+                FunctionParameter = new { time1 = best_time1, highscore1 = player_highscore1, kills1 = kill1, deaths1 = death1, time2 = best_time2, deaths2 = death2, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time, online_kills = mult_kills, online_deaths = mult_deaths, kdr = kd, xp = x_p }, // The parameter provided to your function
                                                                                                                                                                                                                                       //GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
+            }, OnCloudUpdateStat, OnErrorShared);
+        }
+
+        else if (scene.name == "Zenith Base")
+        {
+            //singleplayer
+            player_highscore1 = 0;
+            player_highscore2 = 0;
+            player_highscore3 = 0;
+            best_time3 = -10000;
+            best_time1 = -10000;
+            best_time2 = -10000;
+            death3 = -100;
+            death1 = -100;
+            death2 = -100;
+            kill1 = 0;
+            kill2 = 0;
+            kill3 = 0;
+            total_kills = 0;
+            total_score = 0;
+            total_deaths = 0;
+            total_time = 0;
+            //online
+            mult_deaths = Preserve.multiplayer_deaths;
+            mult_kills = Preserve.multiplayer_kills;
+            double kdr = (double)o_kills / o_deaths;
+            kdr = System.Math.Round(kdr, 2);
+            kd = (int) (kdr * 100);
+            x_p = Preserve.multiplayer_xp;
+            PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
+            {
+                FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
+                FunctionParameter = new { time1 = best_time1, highscore1 = player_highscore1, kills1 = kill1, deaths1 = death1, time2 = best_time2, deaths2 = death2, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time, online_kills = mult_kills, online_deaths = mult_deaths, kdr = kd, xp = x_p }, // The parameter provided to your function
+                                                                                                                                                                                                                                                                                                              //GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
+            }, OnCloudUpdateStat, OnErrorShared);
+        }
+        else if (scene.name == "Circuit 11")
+        {
+            //singleplayer
+            player_highscore1 = 0;
+            player_highscore2 = 0;
+            player_highscore3 = 0;
+            best_time3 = -10000;
+            best_time1 = -10000;
+            best_time2 = -10000;
+            death3 = -100;
+            death1 = -100;
+            death2 = -100;
+            kill1 = 0;
+            kill2 = 0;
+            kill3 = 0;
+            total_kills = 0;
+            total_score = 0;
+            total_deaths = 0;
+            total_time = 0;
+            //online
+            mult_deaths = 0;
+            mult_kills = 0;
+            kd = 0;
+            x_p = 0;
+            PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
+            {
+                FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
+                FunctionParameter = new { time1 = best_time1, highscore1 = player_highscore1, kills1 = kill1, deaths1 = death1, time2 = best_time2, deaths2 = death2, time3 = best_time3, deaths3 = death3, deaths = total_deaths, tot_time = total_time, online_kills = mult_kills, online_deaths = mult_deaths, kdr = kd, xp = x_p }, // The parameter provided to your function
+                                                                                                                                                                                                                                                                                                                                                     //GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
             }, OnCloudUpdateStat, OnErrorShared);
         }
     }

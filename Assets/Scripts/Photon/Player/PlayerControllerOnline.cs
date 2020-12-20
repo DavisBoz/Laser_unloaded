@@ -1,61 +1,119 @@
 ﻿using UnityEngine;
 using Photon;
 using Photon.Pun;
+using UnityEngine.UI;
+using System.Collections;
+using TMPro;
 
-public class PlayerControllerOnline : MonoBehaviourPun
+public class PlayerControllerOnline : MonoBehaviourPunCallbacks
 {
-
+    #region Variables
+    //Movement
     public float speed;
     public float jump_height;
     public float min_distance_swipe;
-    public static int gravity_direction = 1;
-    public static bool g_changed = false;
     public GameObject head;
     public GameObject head2;
-    public GameObject muzzle;
+    public GameObject body;
     public AudioSource pu_sound;
     private FixedJoystick joystick;
-    public Camera cam;
-    public GameObject cam_parent;
     public float rot_speed;
-    public Vector3 current_gravity = Vector3.down;
+    public GameObject cam_parent;
+    public Camera cam;
     public float distance = 6.0f;
     public float height = 2.0f;
     public float height_damping = 2.0f;
     public float cam_speed;
-    bool grounded;
-    bool right;
-    bool left;
-    bool bottom;
-    bool top;
-
+    [HideInInspector]public ProfileData player_profile;
+    [HideInInspector] public bool awayTeam;
+    public TextMeshPro user_header;
     private Vector3 jump_direction = Vector3.up;
+    public Transform obstruction;
     private Vector3 deceleration = new Vector3(.5f, 1f, .5f);
     private Rigidbody rb;
     private Vector2 finger_down_position;
     private Vector2 finger_up_position;
 
+
+    //Health
+    public int starting_health = 100;                            // The amount of health the player starts the game with.
+    public int current_health;                                   // The current health the player has.
+    public Slider health_slider;                                 // Reference to the UI's health bar.
+    public Image damage_image;
+    public GameObject healthUI;
+    public string shock;
+    public string smoke;
+    public float flash_speed = 5f;                               // The speed the damage_image will fade at.
+    public Color flash_colour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damage_image is set to, to flash.
+    private TextMeshProUGUI user_text;
+    public GameObject username;
+
+    private ArenaManager manager;
+    private bool is_dead;                                                // Whether the player is dead.
+    private bool damaged;
+    private bool grounded;
+
+    #endregion Variables
+
+    #region UnityCallbacks
     private void Awake()
     {
         joystick = GameObject.FindWithTag("Joystick").GetComponent<FixedJoystick>();
+        current_health = starting_health;
+        is_dead = false;
     }
+
     void Start()
     {
-            cam_parent.gameObject.SetActive(photonView.IsMine);
-            pu_sound.gameObject.SetActive(photonView.IsMine);
+        manager = GameObject.Find("GameManager").GetComponent<ArenaManager>();
+        cam_parent.SetActive(photonView.IsMine);
+        pu_sound.gameObject.SetActive(photonView.IsMine);
+        healthUI.SetActive(photonView.IsMine);
+        if (photonView.IsMine)
+        {
             rb = GetComponent<Rigidbody>();
-            if(!photonView.IsMine) gameObject.layer = 11;
+            user_text = GameObject.Find("HUD/Username/Text").GetComponent<TextMeshProUGUI>();
+            user_text.text = PhotonLauncher.my_profile.username;
+            photonView.RPC("SyncProfile", RpcTarget.All, PhotonLauncher.my_profile.username, PhotonLauncher.my_profile.level, PhotonLauncher.my_profile.xp, PhotonLauncher.my_profile.color);
+            if (GameSettings.GameMode == GameMode.DEATHMATCH)
+            {
+                photonView.RPC("SyncTeam", RpcTarget.All, GameSettings.IsAwayTeam);
+            }
+        }
+        else
+        {
+            gameObject.transform.GetChild(0).gameObject.layer = 11;
+            ChangeLayerRecursively(transform, 11);
+        }
+    }
+
+    private void ChangeLayerRecursively(Transform p_trans, int p_layer)
+    {
+        p_trans.gameObject.layer = p_layer;
+        foreach (Transform t in p_trans) ChangeLayerRecursively(t, p_layer);
     }
 
     private void Update()
     {
         if (photonView.IsMine)
         {
+            head.transform.position = transform.position;
+            username.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+            user_header.color = new Color(1, 1, 1, 0);
+            if (Pause.paused) return;
             if (joystick.Horizontal != 0f || joystick.Vertical != 0f)
             {
                 Rolling();
             }
-            head.transform.position = transform.position;
+            if (damaged && current_health > 10)
+            {
+                damage_image.color = flash_colour;
+            }
+            else
+            {
+                damage_image.color = Color.Lerp(damage_image.color, Color.clear, flash_speed * Time.deltaTime);
+            }
+            damaged = false;
         }
     }
 
@@ -63,36 +121,8 @@ public class PlayerControllerOnline : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
-            float wanted_height = gameObject.transform.position.y + height;
-            float current_height = cam.transform.position.y;
-            float current_rotation_angle = cam.transform.eulerAngles.y;
-            Quaternion current_rotation = Quaternion.Euler(0, current_rotation_angle, 0);
-            current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
-            if (bottom)
-            {
-                cam.transform.position = transform.position;
-                cam.transform.position -= current_rotation * Vector3.forward * distance;
-                cam.transform.position = new Vector3(cam.transform.position.x, current_height, cam.transform.position.z);
-            }
-            else if (left)
-            {
-                wanted_height = gameObject.transform.position.x + height;
-                current_height = cam.transform.position.x;
-                cam.transform.position = gameObject.transform.position;
-                cam.transform.position -= current_rotation * Vector3.forward * distance;
-                current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
-                cam.transform.position = new Vector3(current_height, cam.transform.position.y, cam.transform.position.z);
-            }
-            else if (right | top)
-            {
-                wanted_height = gameObject.transform.position.x - height;
-                current_height = cam.transform.position.x;
-                cam.transform.position = gameObject.transform.position;
-                cam.transform.position -= current_rotation * Vector3.forward * distance;
-                current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
-                cam.transform.position = new Vector3(current_height, cam.transform.position.y, cam.transform.position.z);
-            }
-           
+            CamControls();
+            ViewObstructed();
         }
     }
 
@@ -100,6 +130,7 @@ public class PlayerControllerOnline : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
+            if (Pause.paused) return;
             foreach (Touch touch in Input.touches)
             {
                 if (touch.position.x > Screen.width * 0.33f && (touch.position.y > Screen.height * 0.2f))
@@ -113,76 +144,10 @@ public class PlayerControllerOnline : MonoBehaviourPun
                     if (touch.phase == TouchPhase.Moved)
                     {
                         finger_down_position = touch.position;
-                        if (SwipeDistanceCheckMet())
-                        {
-                            if (IsVerticalSwipe())
-                            {
-                                if (bottom)
-                                {
-                                    //head2.transform.RotateAround(head2.transform.position, head2.transform.up, touch.deltaPosition.y * Time.deltaTime * rot_speed);
-                                    //cam.transform.RotateAround(cam.transform.position, -cam.transform.right, touch.deltaPosition.y * Time.deltaTime * rot_speed);
-                                    head2.transform.Rotate(0f, touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f);
-                                    cam.transform.Rotate(-touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z);
-                                }
-                                else if (right)
-                                {
-                                    head2.transform.Rotate(0f, touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f);
-                                    cam.transform.Rotate(-touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z+90);
-                                }
-                                else if (left)
-                                {
-                                    head2.transform.Rotate(0f, touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f);
-                                    cam.transform.Rotate(-touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z+270);
-                                }
-                                else if (top)
-                                {
-                                    head2.transform.Rotate(0f, touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f);
-                                    cam.transform.Rotate(-touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z+180);
-                                }
-                            }
-                            else
-                            {
-                                if (bottom)
-                                {
-                                    head.transform.Rotate(0f, 0f, touch.deltaPosition.x * Time.deltaTime * rot_speed);
-                                    cam.transform.Rotate(0f, touch.deltaPosition.x * Time.deltaTime * rot_speed, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z);
-                                }
-                                else if(right)
-                                {
-                                    head.transform.Rotate(0f, 0f, touch.deltaPosition.x * Time.deltaTime * rot_speed);
-                                    cam.transform.Rotate(0f, touch.deltaPosition.x * Time.deltaTime * rot_speed, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z+90);
-                                }
-                                else if (left)
-                                {
-                                    head.transform.Rotate(0f, 0f, touch.deltaPosition.x * Time.deltaTime * rot_speed);
-                                    cam.transform.Rotate(0f, touch.deltaPosition.x * Time.deltaTime * rot_speed, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z+270);
-                                }
-                                else if (top)
-                                {
-                                    head.transform.Rotate(0f, 0f, touch.deltaPosition.x * Time.deltaTime * rot_speed);
-                                    cam.transform.Rotate(0f, touch.deltaPosition.x * Time.deltaTime * rot_speed, 0f);
-                                    float z = cam.transform.eulerAngles.z;
-                                    cam.transform.Rotate(0, 0, -z+180);
-                                }
-                            }
-                        }
+                        Rotating(touch);
                     }
                 }
-                else if((touch.position.x > Screen.width * 0.33f) && (touch.position.y < Screen.height * 0.2f))
+                else if ((touch.position.x > Screen.width * 0.33f) && (touch.position.y < Screen.height * 0.2f))
                 {
                     if (touch.phase == TouchPhase.Began)
                     {
@@ -197,17 +162,102 @@ public class PlayerControllerOnline : MonoBehaviourPun
                         {
                             rb.velocity = new Vector3(0, 0, 0);
                             rb.AddForce(jump_direction * jump_height, ForceMode.Impulse);
-                            grounded = false;
                         }
                     }
                 }
             }
             rb.velocity = Vector3.Scale(rb.velocity, deceleration);
-            rb.AddForce(current_gravity * 15);
+            rb.AddForce(Vector3.down * 15);
+        }
+    }
+    #endregion
+
+    #region Health
+    public void TakeDamage(int amount, int p_actor)
+    {
+        if (photonView.IsMine)
+        {
+            damaged = true;
+            current_health -= amount;
+            health_slider.value = current_health;
+            if (current_health <= 0 && !is_dead)
+            {
+                transform.root.transform.localScale = new Vector3(0, 0, 0);
+                die(shock, smoke, transform.position, transform.rotation);
+                cam_parent.SetActive(false);
+                manager.Respawn();
+                manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
+                if (p_actor >= 0) manager.ChangeStat_S(p_actor, 0, 1);
+                StartCoroutine("BeGone");
+            }
+        }
+
+    }
+
+    [PunRPC]
+    void fallDamage()
+    {
+        if (photonView.IsMine)
+        {
+            damaged = true;
+            current_health = 0;
+            health_slider.value = current_health;
+            if (current_health <= 0 && !is_dead)
+            {
+                cam_parent.SetActive(false);
+                manager.Respawn();
+                manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
+                PhotonNetwork.Destroy(transform.root.gameObject);
+            }
         }
     }
 
+    public void selfDestruct()
+    {
+        photonView.RPC("SelfDestruct", RpcTarget.All);
+    }
 
+    [PunRPC]
+    void SelfDestruct()
+    {
+        if (photonView.IsMine)
+        {
+            damaged = true;
+            current_health = 0;
+            health_slider.value = current_health;
+            if (current_health <= 0 && !is_dead)
+            {
+                transform.root.transform.localScale = new Vector3(0, 0, 0);
+                die(shock, smoke, transform.position, transform.rotation);
+                cam_parent.SetActive(false);
+                manager.Respawn();
+                manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
+                StartCoroutine("BeGone");
+            }
+        }
+    }
+
+    public void die(string explosion, string smo, Vector3 position, Quaternion rotation)
+    {
+        photonView.RPC("Die", RpcTarget.All, explosion, smo, position, rotation);
+    }
+
+    [PunRPC]
+    void Die(string collisionExplosion, string smok, Vector3 position, Quaternion rotation)
+    {
+        GameObject explosion = Instantiate((GameObject)Resources.Load(collisionExplosion), position, rotation);
+        Destroy(explosion, 1f);
+        GameObject smoke = Instantiate((GameObject)Resources.Load(smok), position, rotation);
+    }
+
+    private IEnumerator BeGone()
+    {
+        yield return new WaitForSeconds(2f);
+        PhotonNetwork.Destroy(transform.root.gameObject);
+    }
+    #endregion
+
+    #region Movement
     private bool IsVerticalSwipe()
     {
         return VerticalMovementDistance() > HorizontalMovementDistance();
@@ -232,112 +282,96 @@ public class PlayerControllerOnline : MonoBehaviourPun
     {
         Vector3 forceDirection = cam.transform.forward;
         forceDirection = new Vector3(forceDirection.x, 0, forceDirection.z);
-        if (current_gravity == Vector3.down)
-        {
+        Vector3 TurnDirection = cam.transform.right;
+        TurnDirection = new Vector3(TurnDirection.x, 0, TurnDirection.z);
+        rb.AddForce(forceDirection.normalized * speed * (joystick.Vertical));
+        rb.AddForce(TurnDirection.normalized * speed * (joystick.Horizontal));
+    }
 
-            Vector3 TurnDirection = cam.transform.right;
-            TurnDirection = new Vector3(TurnDirection.x, 0, TurnDirection.z);
-            rb.AddForce(forceDirection.normalized * speed * (joystick.Vertical));
-            rb.AddForce(TurnDirection.normalized * speed * (joystick.Horizontal));
+    public void Rotating(Touch touch)
+    {
+        if (SwipeDistanceCheckMet())
+        {
+            if (IsVerticalSwipe())
+            {
+                head2.transform.Rotate(0f, touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f);
+                cam.transform.Rotate(-touch.deltaPosition.y * Time.deltaTime * rot_speed, 0f, 0f);
+                float z = cam.transform.eulerAngles.z;
+                cam.transform.Rotate(0, 0, -z);
+            }
+            else
+            {
+                head.transform.Rotate(0f, 0f, touch.deltaPosition.x * Time.deltaTime * rot_speed);
+                cam.transform.Rotate(0f, touch.deltaPosition.x * Time.deltaTime * rot_speed, 0f);
+                username.transform.Rotate(0f, touch.deltaPosition.x * Time.deltaTime * rot_speed, 0f);
+                float z = cam.transform.eulerAngles.z;
+                cam.transform.Rotate(0, 0, -z);
+            }
         }
-        else if (current_gravity == Vector3.right)
-        {
+    }
+    #endregion
 
-            Vector3 TurnDirection = -cam.transform.up;
-            TurnDirection = new Vector3(0, TurnDirection.x, TurnDirection.z);
-            rb.AddForce(forceDirection.normalized * speed * (joystick.Vertical));
-            rb.AddForce(TurnDirection.normalized * speed * (joystick.Horizontal));
-        }
-        else if (current_gravity == Vector3.left)
-        {
+    #region Camera
+    public void CamControls()
+    {
+        float wanted_height = head.transform.position.y + height;
+        float current_height = cam.transform.position.y;
+        float current_rotation_angle = cam.transform.eulerAngles.y;
+        Quaternion current_rotation = Quaternion.Euler(0, current_rotation_angle, 0);
+        current_height = Mathf.Lerp(current_height, wanted_height, height_damping * Time.deltaTime);
+        cam.transform.position = head.transform.position;
+        cam.transform.position -= current_rotation * Vector3.forward * distance;
+        cam.transform.position = new Vector3(cam.transform.position.x, current_height, cam.transform.position.z);
+    }
 
-            Vector3 TurnDirection = -cam.transform.up;
-            TurnDirection = new Vector3(0, TurnDirection.x, TurnDirection.z);
-            rb.AddForce(forceDirection.normalized * speed * (joystick.Vertical));
-            rb.AddForce(TurnDirection.normalized * speed * (joystick.Horizontal));
-        }
-        else if (current_gravity == Vector3.up)
+    public void ViewObstructed()
+    {
+        if (Physics.Raycast(cam.transform.position, transform.position - cam.transform.position, out RaycastHit hit, 5f))
         {
-
-            Vector3 TurnDirection = -cam.transform.right;
-            TurnDirection = new Vector3(TurnDirection.x, 0, TurnDirection.z);
-            rb.AddForce(forceDirection.normalized * speed * (joystick.Vertical));
-            rb.AddForce(TurnDirection.normalized * speed * (joystick.Horizontal));
+            if (hit.collider.gameObject.tag != "Player")
+            {
+                if (hit.collider.gameObject.tag == "Environment" && obstruction != null && obstruction != hit.transform)
+                {
+                    obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                    obstruction = hit.collider.transform;
+                    obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                }
+                else if (hit.collider.gameObject.tag == "Environment" && obstruction == null)
+                {
+                    obstruction = hit.collider.transform;
+                    obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                }
+                else if (hit.collider.gameObject.tag == "Environment" && obstruction == hit.transform) { }
+                else if (obstruction == null) { }
+                else
+                {
+                    obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                    obstruction = null;
+                }
+            }
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    #endregion
+
+    #region Collisions
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Right_wall"))
+        if (collision.gameObject.tag == "Reset")
         {
-            grounded = true;
-            left = false;
-            bottom = false;
-            top = false;
-            if (!right)
-            {
-                gravity_direction = 2;
-                current_gravity = Vector3.right;
-                jump_direction = Vector3.left;
-                deceleration = new Vector3(1f, .5f, .5f);
-                cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.Euler(0, 0, 90), Time.deltaTime * speed);
-                head.transform.rotation = Quaternion.Euler(0, -90, 45);
-                right = true;
-            }
+            photonView.RPC("fallDamage", RpcTarget.All);
         }
-
-        if (other.gameObject.CompareTag("Left_wall"))
+        if (collision.gameObject.layer == 14)
         {
             grounded = true;
-            right = false;
-            bottom = false;
-            top= false;
-            if (!left)
-            {
-                gravity_direction = 4;
-                current_gravity = Vector3.left;
-                jump_direction = Vector3.right;
-                deceleration = new Vector3(1f, .5f, .5f);
-                cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.Euler(0, 0, 270), Time.deltaTime * speed);
-                head.transform.rotation = Quaternion.Euler(0, 90, -135);
-                left = true;
-            }
         }
+    }
 
-        if (other.gameObject.CompareTag("Top_wall"))
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == 14)
         {
-            grounded = true;
-            right = false;
-            left = false;
-            bottom = false;
-            if (!top)
-            {
-                gravity_direction = 3;
-                current_gravity = Vector3.up;
-                jump_direction = Vector3.down;
-                deceleration = new Vector3(.5f, 1f, .5f);
-                cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.Euler(0, 0, 180), Time.deltaTime * speed);
-                head.transform.rotation = Quaternion.Euler(90, -135, 0);
-                top = true;
-            }
-        }
-
-        if (other.gameObject.CompareTag("Bottom_wall"))
-        {
-            grounded = true;
-            right = false;
-            left = false;
-            top = false;
-            if (!bottom)
-            {
-                gravity_direction = 1;
-                current_gravity = Vector3.down;
-                jump_direction = Vector3.up;
-                deceleration = new Vector3(.5f, 1f, .5f);
-                cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speed);
-                head.transform.rotation = Quaternion.Euler(-90, -45, 0);
-                bottom = true;
-            }
+            grounded = false;
         }
     }
 
@@ -346,20 +380,51 @@ public class PlayerControllerOnline : MonoBehaviourPun
         if (other.gameObject.CompareTag("ExtraHealth"))
         {
             pu_sound.Play();
+            current_health += 50;
             other.gameObject.SetActive(false);
-            rb.gameObject.GetComponent<PlayerHealth>().current_health += 50;
-            ScoreManager.pickups_used += 1;
         }
-
         if (other.gameObject.CompareTag("SpeedUp"))
         {
             pu_sound.Play();
-            other.gameObject.SetActive(false);
             speed += 30;
-            ScoreManager.pickups_used += 1;
+            other.gameObject.SetActive(false);
         }
-        
+
     }
+    #endregion Collisions
+
+    public void TrySync()
+    {
+        if (!photonView.IsMine) return;
+        photonView.RPC("SyncProfile", RpcTarget.All, PhotonLauncher.my_profile.username, PhotonLauncher.my_profile.level, PhotonLauncher.my_profile.xp, PhotonLauncher.my_profile.color);
+        if (GameSettings.GameMode == GameMode.DEATHMATCH)
+        {
+            photonView.RPC("SyncTeam", RpcTarget.All, GameSettings.IsAwayTeam);
+        }
+    }
+
+    [PunRPC]
+    private void SyncProfile(string p_username, int p_level, int p_xp, string col)
+    {
+        player_profile = new ProfileData(p_username, p_level, p_xp, col);
+        user_header.text = player_profile.username;
+    }
+
+    [PunRPC]
+    private void SyncTeam(bool p_awayTeam)
+    {
+        awayTeam = p_awayTeam;
+
+        if (awayTeam)
+        {
+            user_header.color = Color.red;
+        }
+        else
+        {
+            user_header.color = Color.blue;
+        }
+    }
+
 
 }
 
